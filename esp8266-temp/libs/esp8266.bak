@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# esp8266
+#
+DEF esp8266 U 0 40 Y Y 1 F N
+F0 "U" 650 -300 60 H V C CNN
+F1 "esp8266" 650 -300 60 H V C CNN
+F2 "" 650 -300 60 H V C CNN
+F3 "" 650 -300 60 H V C CNN
+DRAW
+S 50 -100 1100 -950 0 1 0 N
+X rxd 1 -150 -200 200 R 50 50 1 1 I
+X vcc 2 -150 -300 200 R 50 50 1 1 W
+X gpio0 3 -150 -400 200 R 50 50 1 1 T
+X rst 4 -150 -500 200 R 50 50 1 1 I
+X gpio2 5 -150 -600 200 R 50 50 1 1 T
+X ch_pd 6 -150 -700 200 R 50 50 1 1 T
+X gnd 7 -150 -800 200 R 50 50 1 1 w
+X txd 8 -150 -900 200 R 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+#End Library
