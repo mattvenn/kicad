@@ -1,4 +1,4 @@
 (fp_lib_table
-  (lib (name custom)(type KiCad)(uri ./footprints/)(options "")(descr ""))
+  (lib (name custom)(type KiCad)(uri /home/mattvenn/work/kicad/esp8266-temp/footprints.pretty/)(options "")(descr ""))
   (lib (name onewire)(type Legacy)(uri ./footprints/1wire.mod)(options "")(descr ""))
 )

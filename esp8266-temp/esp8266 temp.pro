@@ -1,4 +1,4 @@
-update=Fri 17 Jul 2015 13:59:54 BST
+update=Sat 25 Jul 2015 20:35:04 BST
 version=1
 last_client=kicad
 [cvpcb]
@@ -27,7 +27,7 @@ ModuleOutlineThickness=0.15
 version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=/home/mattvenn/work/kicad/libs;/home/mattvenn/work/kicad/libs/matt.pretty
 [eeschema/libraries]
 LibName1=esp8266 temp-rescue
 LibName2=power
@@ -61,3 +61,4 @@ LibName29=contrib
 LibName30=valves
 LibName31=libs/esp8266
 LibName32=libs/1wire
+LibName33=matt

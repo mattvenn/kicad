@@ -1,10 +1,22 @@
 EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #
+# dfdfdf
+#
+DEF dfdfdf U 0 40 Y Y 1 F N
+F0 "U" 1350 700 60 H V C CNN
+F1 "dfdfdf" 1350 700 60 H V C CNN
+F2 "" 1350 700 60 H V C CNN
+F3 "" 1350 700 60 H V C CNN
+DRAW
+C 1200 800 424 0 1 0 N
+ENDDRAW
+ENDDEF
+#
 # esp8266
 #
 DEF esp8266 U 0 40 Y Y 1 F N
-F0 "U" 650 -300 60 H V C CNN
+F0 "U" 500 -200 60 H V C CNN
 F1 "esp8266" 650 -300 60 H V C CNN
 F2 "" 650 -300 60 H V C CNN
 F3 "" 650 -300 60 H V C CNN
