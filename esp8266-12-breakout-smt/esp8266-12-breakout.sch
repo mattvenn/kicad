@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:esp8266-12-breakout-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:esp8266-12
 LIBS:esp8266-12-breakout-cache
 EELAYER 25 0
 EELAYER END
@@ -417,7 +415,7 @@ F 3 "" H 7500 3450 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Label 7600 3550 0    60   ~ 0
-gpio5
+gpio4
 Wire Wire Line
 	7950 4250 7600 4250
 Wire Wire Line
@@ -431,7 +429,7 @@ Wire Wire Line
 Wire Wire Line
 	7950 3650 7600 3650
 Text Label 7600 3650 0    60   ~ 0
-gpio4
+gpio5
 Text Label 7600 3750 0    60   ~ 0
 gpio0
 Text Label 7600 3850 0    60   ~ 0
@@ -462,9 +460,9 @@ Wire Wire Line
 Text Label 7600 4350 0    60   ~ 0
 gpio16
 Text Label 6150 3150 0    60   ~ 0
-gpio5
-Text Label 6150 3250 0    60   ~ 0
 gpio4
+Text Label 6150 3250 0    60   ~ 0
+gpio5
 Text Label 4750 3050 0    60   ~ 0
 adc
 Text Label 4750 3250 0    60   ~ 0
