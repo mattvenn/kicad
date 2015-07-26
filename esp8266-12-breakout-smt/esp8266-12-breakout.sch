@@ -65,12 +65,6 @@ F 3 "" H 4450 3650 60  0000 C CNN
 	1    4450 3650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4450 3650 5050 3650
-Wire Wire Line
-	6150 3650 6350 3650
-Wire Wire Line
-	6350 3650 6350 4000
 $Comp
 L R R1
 U 1 1 55ACED8E
@@ -94,16 +88,8 @@ F 3 "" H 4650 2650 60  0000 C CNN
 	1    4650 2650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5050 2950 4650 2950
 Text Label 4800 2950 0    60   ~ 0
 reset
-Wire Wire Line
-	6150 2950 6650 2950
-Wire Wire Line
-	6150 3050 6650 3050
-Wire Wire Line
-	5050 3150 4450 3150
 $Comp
 L +3.3V #PWR03
 U 1 1 55ACEE99
@@ -119,8 +105,6 @@ Text Label 6350 2950 0    60   ~ 0
 tx
 Text Label 6350 3050 0    60   ~ 0
 rx
-Wire Wire Line
-	6150 3350 7000 3350
 Text Label 6350 3350 0    60   ~ 0
 gpio0
 $Comp
@@ -179,12 +163,6 @@ F 3 "" H 2150 1400 60  0000 C CNN
 	1    2150 1400
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2850 1400 3500 1400
-Wire Wire Line
-	2550 1700 2550 1750
-Wire Wire Line
-	2150 1400 2250 1400
 $Comp
 L PWR_FLAG #FLG08
 U 1 1 55AD3163
@@ -207,13 +185,6 @@ F 3 "" H 2900 2150 60  0000 C CNN
 	1    2900 2150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2900 1700 2900 2150
-Wire Wire Line
-	2900 1700 2550 1700
-Connection ~ 2550 1700
-Connection ~ 3300 1400
-Connection ~ 2200 1400
 $Comp
 L CP C1
 U 1 1 55AD3174
@@ -283,8 +254,6 @@ F 3 "" H 3500 1700 60  0000 C CNN
 	1    3500 1700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6850 2250 6500 2250
 Text Label 6600 2250 0    60   ~ 0
 gpio0
 $Comp
@@ -298,10 +267,6 @@ F 3 "" H 7700 1650 60  0000 C CNN
 	1    7700 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7500 1400 6900 1400
-Wire Wire Line
-	7500 1600 6900 1600
 $Comp
 L GND #PWR013
 U 1 1 55AD3AF6
@@ -335,10 +300,6 @@ F 3 "" H 6900 1400 60  0000 C CNN
 	1    6900 1400
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7500 1700 6950 1700
-Wire Wire Line
-	7500 1800 6950 1800
 Text Label 7100 1700 0    60   ~ 0
 rx
 Text Label 7100 1800 0    60   ~ 0
@@ -368,8 +329,6 @@ F 4 "1759438" H 7350 1900 60  0001 C CNN "farnell #"
 	1    7350 1900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7200 1900 6950 1900
 Text Label 7050 1900 0    60   ~ 0
 reset
 $Comp
@@ -384,50 +343,32 @@ F 4 "2057856" H 6750 3800 60  0001 C CNN "farnell #"
 	1    6750 3800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6150 3550 6750 3550
-Wire Wire Line
-	6750 3550 6750 3650
 Text Label 6350 3550 0    60   ~ 0
 gpio15
-Wire Wire Line
-	7950 3550 7600 3550
 $Comp
 L +5V #PWR016
 U 1 1 55AD401A
-P 7600 3350
-F 0 "#PWR016" H 7600 3200 50  0001 C CNN
-F 1 "+5V" H 7600 3490 50  0000 C CNN
-F 2 "" H 7600 3350 60  0000 C CNN
-F 3 "" H 7600 3350 60  0000 C CNN
-	1    7600 3350
+P 7600 3250
+F 0 "#PWR016" H 7600 3100 50  0001 C CNN
+F 1 "+5V" H 7600 3390 50  0000 C CNN
+F 2 "" H 7600 3250 60  0000 C CNN
+F 3 "" H 7600 3250 60  0000 C CNN
+	1    7600 3250
 	0    -1   -1   0   
 $EndComp
 $Comp
 L +3.3V #PWR017
 U 1 1 55AD4049
-P 7500 3450
-F 0 "#PWR017" H 7500 3300 50  0001 C CNN
-F 1 "+3.3V" H 7500 3590 50  0000 C CNN
-F 2 "" H 7500 3450 60  0000 C CNN
-F 3 "" H 7500 3450 60  0000 C CNN
-	1    7500 3450
+P 7500 3350
+F 0 "#PWR017" H 7500 3200 50  0001 C CNN
+F 1 "+3.3V" H 7500 3490 50  0000 C CNN
+F 2 "" H 7500 3350 60  0000 C CNN
+F 3 "" H 7500 3350 60  0000 C CNN
+	1    7500 3350
 	0    -1   -1   0   
 $EndComp
 Text Label 7600 3550 0    60   ~ 0
 gpio4
-Wire Wire Line
-	7950 4250 7600 4250
-Wire Wire Line
-	7950 4150 7600 4150
-Wire Wire Line
-	7950 4050 7600 4050
-Wire Wire Line
-	7950 3950 7600 3950
-Wire Wire Line
-	7950 3750 7600 3750
-Wire Wire Line
-	7950 3650 7600 3650
 Text Label 7600 3650 0    60   ~ 0
 gpio5
 Text Label 7600 3750 0    60   ~ 0
@@ -453,10 +394,6 @@ F 3 "" H 8150 3800 60  0000 C CNN
 	1    8150 3800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7950 4350 7600 4350
-Wire Wire Line
-	7950 4450 7600 4450
 Text Label 7600 4350 0    60   ~ 0
 gpio16
 Text Label 6150 3150 0    60   ~ 0
@@ -475,20 +412,8 @@ Text Label 4750 3550 0    60   ~ 0
 gpio13
 Text Label 6150 3450 0    60   ~ 0
 gpio2
-Wire Wire Line
-	5050 3250 4750 3250
-Wire Wire Line
-	5050 3350 4750 3350
-Wire Wire Line
-	5050 3450 4750 3450
-Wire Wire Line
-	5050 3550 4750 3550
 Text Label 7600 4450 0    60   ~ 0
 adc
-Wire Wire Line
-	7950 3850 7600 3850
-Wire Wire Line
-	5050 3050 4750 3050
 $Comp
 L GND #PWR018
 U 1 1 55AD404D
@@ -522,14 +447,6 @@ F 3 "" H 7850 3150 60  0000 C CNN
 	1    7850 3150
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7850 3150 7950 3150
-Wire Wire Line
-	7950 3150 7950 3250
-Wire Wire Line
-	7950 3350 7600 3350
-Wire Wire Line
-	7950 3450 7500 3450
 $Comp
 L LED D1
 U 1 1 55B2ABC8
@@ -576,4 +493,89 @@ F 3 "" H 4300 1350 60  0000 C CNN
 	1    4300 1350
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4450 3650 5050 3650
+Wire Wire Line
+	6150 3650 6350 3650
+Wire Wire Line
+	6350 3650 6350 4000
+Wire Wire Line
+	5050 2950 4650 2950
+Wire Wire Line
+	6150 2950 6650 2950
+Wire Wire Line
+	6150 3050 6650 3050
+Wire Wire Line
+	5050 3150 4450 3150
+Wire Wire Line
+	6150 3350 7000 3350
+Wire Wire Line
+	2850 1400 3500 1400
+Wire Wire Line
+	2550 1700 2550 1750
+Wire Wire Line
+	2150 1400 2250 1400
+Wire Wire Line
+	2900 1700 2900 2150
+Wire Wire Line
+	2900 1700 2550 1700
+Connection ~ 2550 1700
+Connection ~ 3300 1400
+Connection ~ 2200 1400
+Wire Wire Line
+	6850 2250 6500 2250
+Wire Wire Line
+	7500 1400 6900 1400
+Wire Wire Line
+	7500 1600 6900 1600
+Wire Wire Line
+	7500 1700 6950 1700
+Wire Wire Line
+	7500 1800 6950 1800
+Wire Wire Line
+	7200 1900 6950 1900
+Wire Wire Line
+	6150 3550 6750 3550
+Wire Wire Line
+	6750 3550 6750 3650
+Wire Wire Line
+	7950 3550 7600 3550
+Wire Wire Line
+	7950 4250 7600 4250
+Wire Wire Line
+	7950 4150 7600 4150
+Wire Wire Line
+	7950 4050 7600 4050
+Wire Wire Line
+	7950 3950 7600 3950
+Wire Wire Line
+	7950 3750 7600 3750
+Wire Wire Line
+	7950 3650 7600 3650
+Wire Wire Line
+	7950 4350 7600 4350
+Wire Wire Line
+	7950 4450 7600 4450
+Wire Wire Line
+	5050 3250 4750 3250
+Wire Wire Line
+	5050 3350 4750 3350
+Wire Wire Line
+	5050 3450 4750 3450
+Wire Wire Line
+	5050 3550 4750 3550
+Wire Wire Line
+	7950 3850 7600 3850
+Wire Wire Line
+	5050 3050 4750 3050
+Wire Wire Line
+	7850 3150 7950 3150
+Wire Wire Line
+	7600 3250 7950 3250
+Wire Wire Line
+	7500 3350 7950 3350
+Wire Wire Line
+	7600 3450 7950 3450
+Text Label 7600 3450 0    60   ~ 0
+reset
 $EndSCHEMATC
