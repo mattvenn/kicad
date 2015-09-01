@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:matt
 LIBS:esp8266-12-breakout-cache
 EELAYER 25 0
 EELAYER END
@@ -368,9 +369,9 @@ F 3 "" H 7500 3350 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Label 7600 3550 0    60   ~ 0
-gpio4
-Text Label 7600 3650 0    60   ~ 0
 gpio5
+Text Label 7600 3650 0    60   ~ 0
+gpio4
 Text Label 7600 3750 0    60   ~ 0
 gpio0
 Text Label 7600 3850 0    60   ~ 0
@@ -398,9 +399,9 @@ $EndComp
 Text Label 7600 4350 0    60   ~ 0
 gpio16
 Text Label 6150 3150 0    60   ~ 0
-gpio4
-Text Label 6150 3250 0    60   ~ 0
 gpio5
+Text Label 6150 3250 0    60   ~ 0
+gpio4
 Text Label 4750 3050 0    60   ~ 0
 adc
 Text Label 4750 3250 0    60   ~ 0

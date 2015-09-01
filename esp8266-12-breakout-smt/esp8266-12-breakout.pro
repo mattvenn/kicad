@@ -1,4 +1,4 @@
-update=Tuesday, 11 August 2015 16:13:29
+update=Tue 01 Sep 2015 16:53:21 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.15
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=/home/mattvenn/work/kicad/esp8266-12-breakout-smt/libs
@@ -57,5 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=/Users/mattvenn/Documents/kicad/libs/matt
-[general]
-version=1
+LibName31=/home/mattvenn/work/kicad/libs/matt
