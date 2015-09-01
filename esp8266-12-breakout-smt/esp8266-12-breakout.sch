@@ -391,6 +391,7 @@ F 0 "P2" H 8150 4550 50  0000 C CNN
 F 1 "CONN_01X14" V 8250 3800 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x14" H 8150 3800 60  0001 C CNN
 F 3 "" H 8150 3800 60  0000 C CNN
+F 4 "1022263" H 8150 3800 60  0001 C CNN "farnell #"
 	1    8150 3800
 	1    0    0    -1  
 $EndComp
