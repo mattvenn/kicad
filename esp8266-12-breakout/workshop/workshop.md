@@ -7,7 +7,7 @@
 
 ## Drawing the Schematic
 
-[screencast](https://www.youtube.com/watch?v=SAGcpGdsB4c&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+[Schematic creation screencast](https://www.youtube.com/watch?v=SAGcpGdsB4c&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
 ![schematic](schematic.png)
 
@@ -21,13 +21,23 @@ symbols.
 Footprint librarys are files within a directory. The directory name ends in
 .pretty. The files end in .kicad_mod. Each file contains a separate footprint
 
-### Add the ESP8266 symbol library to Eschema
+### Add the ESP8266 symbol library
 
-* open eschema
+[screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=50)
+
+* open Eschema
 * prefs -> component libs
-* add component library _file_ (not path)
-* find lib just created and double click it
-* now should be able to search for symbol when adding new symbols
+* click add
+* find esp8266.lib and double click it
+
+### Add ESP8266 footprint library
+
+[screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=165)
+
+* open Eschema, run CvPCB to associate footprints
+* preferences -> footprint libraries
+* either project specific or global tab
+* add the path to the library directory (ends in .pretty) ensure its type is kicad
 
 ### Hot Keys
 
@@ -43,14 +53,10 @@ Footprint librarys are files within a directory. The directory name ends in
 
 ## Create PCB
 
-[screencast](https://www.youtube.com/watch?v=t0hJgYAWNFI&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+![layout](layout.png)
 
-### Add ESP8266 library to Pcbnew
+[PCB creation screencast](https://www.youtube.com/watch?v=t0hJgYAWNFI&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
-* open Pcbnew
-* preferences -> footprint library manager
-* either project specific or global tab
-* add the path to the library directory (ends in .pretty) ensure its type is kicad
 
 ### Kot Keys
 
