@@ -77,3 +77,21 @@ Example layout optimised for milling or etching.
 * pg down - route on bottom layer
 * v - create via
 * f - flip a component between top & bottom layers
+
+## Fabrication
+
+[Fabrication screencast](https://www.youtube.com/watch?v=VwQu3Ap_2rI&index=5&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+
+### Description of layers
+
+* F.Cu - top copper layer used for electrical connections
+* B.Cu - bottom copper layer (as above)
+* F.SilkS - top silk screen used for component markings and orientation
+* B.SilkS - bottom silk screen (as above)
+* F.Mask - top mask used to cover the electrical connections with a nonconductive coloured layer
+* B.Mask - bottom mask (as above)
+* Edge.Cuts - where the board should be cut out
+
+Each of these layers is exported as a separate file called a gerber.
+
+We also need a drill file that specifies where all the holes are.
