@@ -2,7 +2,7 @@
 
 ## Useful links
 
-* shortlink to this doc: TODO
+* shortlink to this doc: ven.nz/kicad-workshop
 * [all the screencasts](https://www.youtube.com/playlist?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
 ## Drawing the Schematic
@@ -18,12 +18,12 @@ Download the [ESP8266 symbol and footpring libraries](https://github.com/mattven
 Symbol libraries are single files that end in .lib. They can contain 1 or many
 symbols.
 
-Footprint librarys are files within a directory. The directory name ends in
+Footprint libraries are files within a directory. The directory name ends in
 .pretty. The files end in .kicad_mod. Each file contains a separate footprint
 
 ### Add the ESP8266 symbol library
 
-[screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=50)
+[Adding symbol library screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=50)
 
 * open Eschema
 * prefs -> component libs
@@ -32,7 +32,7 @@ Footprint librarys are files within a directory. The directory name ends in
 
 ### Add ESP8266 footprint library
 
-[screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=165)
+[Adding footprint library screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=165)
 
 * open Eschema, run CvPCB to associate footprints
 * preferences -> footprint libraries
@@ -56,7 +56,6 @@ Footprint librarys are files within a directory. The directory name ends in
 ![layout](layout.png)
 
 [PCB creation screencast](https://www.youtube.com/watch?v=t0hJgYAWNFI&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
-
 
 ### Kot Keys
 
