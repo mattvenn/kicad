@@ -2,12 +2,15 @@
 
 ## Useful links
 
-* shortlink to this doc: ven.nz/kicad-workshop
-* [all the screencasts](https://www.youtube.com/playlist?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+* Shortlink to this doc: ven.nz/kicad-workshop
+* [All the screencasts](https://www.youtube.com/playlist?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+* [KiCad project repo containing schematic and layout](https://github.com/mattvenn/kicad/tree/master/esp8266-12-breakout)
 
 ## Drawing the Schematic
 
 [Schematic creation screencast](https://www.youtube.com/watch?v=SAGcpGdsB4c&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+
+Schematic is an ESP8266 breakout board with PSU and programming header:
 
 ![schematic](schematic.png)
 
@@ -18,15 +21,16 @@ Download the [ESP8266 symbol and footpring libraries](https://github.com/mattven
 Symbol libraries are single files that end in .lib. They can contain 1 or many
 symbols.
 
-Footprint libraries are files within a directory. The directory name ends in
-.pretty. The files end in .kicad_mod. Each file contains a separate footprint
+Footprint libraries are actually a directory containing 1 or more footprint
+files. The directory name ends in .pretty. The footprint files end in
+.kicad_mod.
 
 ### Add the ESP8266 symbol library
 
 [Adding symbol library screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=50)
 
 * open Eschema
-* prefs -> component libs
+* preferences -> component libs
 * click add
 * find esp8266.lib and double click it
 
@@ -53,9 +57,11 @@ Footprint libraries are files within a directory. The directory name ends in
 
 ## Create PCB
 
-![layout](layout.png)
-
 [PCB creation screencast](https://www.youtube.com/watch?v=t0hJgYAWNFI&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+
+Example layout optimised for milling or etching.
+
+![layout](layout.png)
 
 ### Kot Keys
 
