@@ -1,8 +1,7 @@
 # KiCad workshop handout
 
-The documentation for this workshop are mostly youtube screencasts. The
-screencasts are fast, if you need them slower then click the video's settings
-button and choose a slower speed.
+The documentation for this workshop mostly consists of youtube screencasts. The
+screencasts are deliberately fast, if you need them slower then click the video's settings button and choose a slower speed.
 
 You are advised to watch the screencasts all the way through before starting,
 then reference them as needed.
@@ -16,7 +15,7 @@ You will be making a breadboard power supply to supply either 3.3v or 5v.
 
 ## Useful links
 
-* Shortlink to this doc: ven.nz/kicad-workshop
+* Shortlink to this doc: ven.nz/kicad-ws
 * [All the screencasts](https://www.youtube.com/playlist?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 * [KiCad project repo containing schematic and layout](https://github.com/mattvenn/kicad/tree/master/esp8266-12-breakout)
 
@@ -24,7 +23,7 @@ You will be making a breadboard power supply to supply either 3.3v or 5v.
 
 [Schematic creation screencast](https://www.youtube.com/watch?v=SAGcpGdsB4c&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
-Schematic is a simple breadboard PSU:
+Your first task is to produce the schematic below:
 
 ![schematic](schematic.png)
 
@@ -41,27 +40,19 @@ Schematic is a simple breadboard PSU:
 * c - copy
 * l - lable a wire (wires with the same label are joined)
 
-### Using the ESP8266 library
+### Adding a library
 
-Download the [ESP8266 symbol and footpring libraries](https://github.com/mattvenn/kicad-esp8266-lib/archive/master.zip)
+The barrel jack's PCB footprint will not be fabricated properly because
+OSHPark's fab don't do thin slots. You'll use a different footprint that's made
+with large holes.
 
-Symbol libraries are single files that end in .lib. They can contain 1 or many
-symbols.
+Download the [barrel jack's modified footprint library](https://github.com/mattvenn/kicad/raw/master/breadboard-psu/barrel.zip)
 
-Footprint libraries are actually a directory containing 1 or more footprint
+Footprint libraries are a directory containing 1 or more footprint
 files. The directory name ends in .pretty. The footprint files end in
 .kicad_mod.
 
-### Add the ESP8266 symbol library
-
-[Adding symbol library screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=50)
-
-* open Eschema
-* preferences -> component libs
-* click add
-* find esp8266.lib and double click it
-
-### Add ESP8266 footprint library
+#### Install and use footprint library
 
 [Adding footprint library screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=165)
 
@@ -69,13 +60,15 @@ files. The directory name ends in .pretty. The footprint files end in
 * preferences -> footprint libraries
 * either project specific or global tab
 * add the path to the library directory (ends in .pretty) ensure its type is kicad
-
+* scroll down the list of libraries and click the new barrel library
+* highlight the barrel jack component in the middle column and double click the
+ new footprint on the right column.
 
 ## Create PCB
 
 [PCB creation screencast](https://www.youtube.com/watch?v=t0hJgYAWNFI&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
-Example layout optimised for milling or etching.
+Example layout of the PCB:
 
 ![layout](layout.png)
 
@@ -112,4 +105,4 @@ Example layout optimised for milling or etching.
 
 Each of these layers is exported as a separate file called a gerber.
 
-We also need a drill file that specifies where all the holes are.
+You also need a drill file that specifies where all the holes are.
