@@ -58,8 +58,6 @@ Footprint libraries are a directory containing 1 or more footprint
 files. The directory name ends in .pretty. The footprint files end in
 .kicad_mod.
 
-[Watch the adding footprint library screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=165)
-
 * open Eschema, run CvPCB to associate footprints
 * preferences -> footprint libraries
 * either project specific or global tab
