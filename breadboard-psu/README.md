@@ -22,7 +22,8 @@ The screencasts show the creation of a simple LED board - you will be making a b
 
 [Watch the schematic creation screencast](https://www.youtube.com/watch?v=SAGcpGdsB4c&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
-Your first task is to produce the schematic below:
+Your first task is to produce the schematic below.
+If you want a 3.3v output use part AP1117D33. If you want 5v then use LM7805CT.
 
 ![schematic](schematic.png)
 
