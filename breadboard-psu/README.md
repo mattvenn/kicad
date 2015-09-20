@@ -26,6 +26,11 @@ Your first task is to produce the schematic below:
 
 ![schematic](schematic.png)
 
+## Tips
+
+* Don't bother naming components, that will happen automatically
+* Use the hot keys below!
+
 ## Hot Keys
 
 * ? - show hotkeys
@@ -69,16 +74,20 @@ Example layout of the PCB:
 
 ![layout](layout.png)
 
+## Tips
+
+* Some operations are easier in default canvas (F9), others in OpenGL (F11)
+
 ## Kot Keys
 
 * ? - show hotkeys
 * space - reset local co-ordinates
-* f1 - zoom in
-* f2 - zoom out
+* F1 - zoom in
+* F2 - zoom out
 * m - move component (without wires)
 * g - drag component (with wires)
 * del - delete an object
-* f11 - switch to openGL view (necessary for push'n'shove routing)
+* F11 - switch to openGL view (necessary for push'n'shove routing)
 * e - routing options (only in openGL)
 * x - start routing
 * pg up - route on top layer
