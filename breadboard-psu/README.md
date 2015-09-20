@@ -29,6 +29,7 @@ Your first task is to produce the schematic below:
 ## Tips
 
 * Don't bother naming components, that will happen automatically
+* The regulator footprint is in the power_integrations library
 * Use the hot keys below!
 
 ## Hot Keys
@@ -77,6 +78,7 @@ Example layout of the PCB:
 ## Tips
 
 * Some operations are easier in default canvas (F9), others in OpenGL (F11)
+* Use the hot keys below!
 
 ## Kot Keys
 
