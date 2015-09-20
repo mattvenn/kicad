@@ -17,17 +17,16 @@ You will be making a breadboard power supply to supply either 3.3v or 5v.
 
 * Shortlink to this doc: ven.nz/kicad-ws
 * [All the screencasts](https://www.youtube.com/playlist?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
-* [KiCad project repo containing schematic and layout](https://github.com/mattvenn/kicad/tree/master/esp8266-12-breakout)
 
-## Drawing the Schematic
+# Drawing the Schematic
 
-[Schematic creation screencast](https://www.youtube.com/watch?v=SAGcpGdsB4c&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+[Watch the schematic creation screencast](https://www.youtube.com/watch?v=SAGcpGdsB4c&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
 Your first task is to produce the schematic below:
 
 ![schematic](schematic.png)
 
-### Hot Keys
+## Hot Keys
 
 * ? - show hotkeys
 * e - edit component
@@ -40,7 +39,7 @@ Your first task is to produce the schematic below:
 * c - copy
 * l - lable a wire (wires with the same label are joined)
 
-### Adding a library
+## Adding a library
 
 The barrel jack's PCB footprint will not be fabricated properly because
 OSHPark's fab don't do thin slots. You'll use a different footprint that's made
@@ -52,9 +51,7 @@ Footprint libraries are a directory containing 1 or more footprint
 files. The directory name ends in .pretty. The footprint files end in
 .kicad_mod.
 
-#### Install and use footprint library
-
-[Adding footprint library screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=165)
+[Watch the adding footprint library screencast](https://youtu.be/gfC7R_rTocs?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&t=165)
 
 * open Eschema, run CvPCB to associate footprints
 * preferences -> footprint libraries
@@ -64,15 +61,15 @@ files. The directory name ends in .pretty. The footprint files end in
 * highlight the barrel jack component in the middle column and double click the
  new footprint on the right column.
 
-## Create PCB
+# Create the PCB
 
-[PCB creation screencast](https://www.youtube.com/watch?v=t0hJgYAWNFI&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+[Watch the PCB creation screencast](https://www.youtube.com/watch?v=t0hJgYAWNFI&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
 Example layout of the PCB:
 
 ![layout](layout.png)
 
-### Kot Keys
+## Kot Keys
 
 * ? - show hotkeys
 * space - reset local co-ordinates
@@ -89,11 +86,11 @@ Example layout of the PCB:
 * v - create via
 * f - flip a component between top & bottom layers
 
-## Fabrication
+# Fabrication
 
-[Fabrication screencast](https://www.youtube.com/watch?v=VwQu3Ap_2rI&index=5&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+[Watch the fabrication screencast](https://www.youtube.com/watch?v=VwQu3Ap_2rI&index=5&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
-### Description of layers
+## Description of layers
 
 * F.Cu - top copper layer used for electrical connections
 * B.Cu - bottom copper layer (as above)
