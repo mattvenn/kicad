@@ -1,5 +1,19 @@
 # KiCad workshop handout
 
+The documentation for this workshop are mostly youtube screencasts. The
+screencasts are fast, if you need them slower then click the video's settings
+button and choose a slower speed.
+
+You are advised to watch the screencasts all the way through before starting,
+then reference them as needed.
+
+Each screencast has a table of contents with timings. Click the 'more' link to
+expose it.
+
+You will be making a breadboard power supply to supply either 3.3v or 5v.
+
+![photo](pcb-psu.jpg)
+
 ## Useful links
 
 * Shortlink to this doc: ven.nz/kicad-workshop
@@ -10,9 +24,22 @@
 
 [Schematic creation screencast](https://www.youtube.com/watch?v=SAGcpGdsB4c&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
-Schematic is an ESP8266 breakout board with PSU and programming header:
+Schematic is a simple breadboard PSU:
 
 ![schematic](schematic.png)
+
+### Hot Keys
+
+* ? - show hotkeys
+* e - edit component
+* m - move component (without wires)
+* g - drag component (with wires)
+* r - rotate
+* a - add component
+* del - delete component
+* w - start a wire
+* c - copy
+* l - lable a wire (wires with the same label are joined)
 
 ### Using the ESP8266 library
 
@@ -43,17 +70,6 @@ files. The directory name ends in .pretty. The footprint files end in
 * either project specific or global tab
 * add the path to the library directory (ends in .pretty) ensure its type is kicad
 
-### Hot Keys
-
-* ? - show hotkeys
-* e - edit component
-* g - move
-* r - rotate
-* a - add component
-* del - delete component
-* w - start a wire
-* c - copy
-* l - lable a wire (wires with the same label are joined)
 
 ## Create PCB
 
@@ -69,7 +85,9 @@ Example layout optimised for milling or etching.
 * space - reset local co-ordinates
 * f1 - zoom in
 * f2 - zoom out
-* del - delete component
+* m - move component (without wires)
+* g - drag component (with wires)
+* del - delete an object
 * f11 - switch to openGL view (necessary for push'n'shove routing)
 * e - routing options (only in openGL)
 * x - start routing
