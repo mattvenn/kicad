@@ -9,7 +9,7 @@ then reference them as needed.
 Each screencast has a table of contents with timings. Click the 'more' link to
 expose it.
 
-You will be making a breadboard power supply to supply either 3.3v or 5v.
+The screencasts show the creation of a simple LED board - you will be making a breadboard power supply to supply either 3.3v or 5v.
 
 ![photo](pcb-psu.jpg)
 
