@@ -9,7 +9,7 @@ screencasts are deliberately fast, if you need them slower then click the video'
 You are advised to watch the screencasts all the way through before starting,
 then reference them as needed.
 
-Each screencast has a clickable table of contents. Click the video's 'shore more' link to expose it.
+Each screencast has a clickable table of contents. Click the video's 'show more' link to expose it.
 
 The screencasts show the creation of a simple LED board as a way of showing the
 process. Don't just follow along - you will be making a breadboard power supply to supply either 3.3v or 5v.
