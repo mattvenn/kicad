@@ -1,22 +1,21 @@
 # KiCad workshop handout
 
-The documentation for this workshop mostly consists of youtube screencasts. The
+Shortlink to this page: ven.nz/kicad-ws
+
+The documentation for this workshop mostly consists of [youtube
+screencasts](https://www.youtube.com/watch?v=Np3-4eBxWKM&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC). The
 screencasts are deliberately fast, if you need them slower then click the video's settings button and choose a slower speed.
 
 You are advised to watch the screencasts all the way through before starting,
 then reference them as needed.
 
-Each screencast has a table of contents with timings. Click the 'more' link to
-expose it.
+Each screencast has a clickable table of contents. Click the video's 'shore more' link to expose it.
 
-The screencasts show the creation of a simple LED board - you will be making a breadboard power supply to supply either 3.3v or 5v.
+The screencasts show the creation of a simple LED board as a way of showing the
+process. Don't just follow along - you will be making a breadboard power supply to supply either 3.3v or 5v.
 
 ![photo](pcb-psu.jpg)
 
-## Useful links
-
-* Shortlink to this doc: ven.nz/kicad-ws
-* [All the screencasts](https://www.youtube.com/playlist?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
 # Drawing the Schematic
 
@@ -68,7 +67,7 @@ files. The directory name ends in .pretty. The footprint files end in
 
 # Create the PCB
 
-[Watch the PCB creation screencast](https://www.youtube.com/watch?v=t0hJgYAWNFI&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+[Watch the PCB creation screencast](https://www.youtube.com/watch?v=v-qCI8wv72w&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
 Example layout of the PCB:
 
@@ -98,7 +97,7 @@ Example layout of the PCB:
 
 # Fabrication
 
-[Watch the fabrication screencast](https://www.youtube.com/watch?v=VwQu3Ap_2rI&index=5&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+[Watch the fabrication screencast](https://www.youtube.com/watch?v=Np3-4eBxWKM&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
 ## Description of layers
 
