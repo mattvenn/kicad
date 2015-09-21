@@ -113,3 +113,5 @@ Example layout of the PCB:
 Each of these layers is exported as a separate file called a gerber.
 
 You also need a drill file that specifies where all the holes are.
+
+Zip all the files together and then upload to [OSHPark.com](http://oshpark.com)
