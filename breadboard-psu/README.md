@@ -3,7 +3,7 @@
 Shortlink to this page: ven.nz/kicad-ws
 
 The documentation for this workshop mostly consists of [youtube
-screencasts](https://www.youtube.com/watch?v=Np3-4eBxWKM&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC). The
+screencasts](https://www.youtube.com/playlist?list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC). The
 screencasts are deliberately fast, if you need them slower then click the video's settings button and choose a slower speed.
 
 You are advised to watch the screencasts all the way through before starting,
@@ -68,7 +68,7 @@ files. The directory name ends in .pretty. The footprint files end in
 
 # Create the PCB
 
-[Watch the PCB creation screencast](https://www.youtube.com/watch?v=Np3-4eBxWKM&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+[Watch the PCB creation screencast](https://www.youtube.com/watch?v=g9wKArt-YmE&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
 Example layout of the PCB:
 
@@ -98,7 +98,7 @@ Example layout of the PCB:
 
 # Fabrication
 
-[Watch the fabrication screencast](https://www.youtube.com/watch?v=Np3-4eBxWKM&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+[Watch the fabrication screencast](https://www.youtube.com/watch?v=VwQu3Ap_2rI&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&index=5)
 
 ## Description of layers
 
