@@ -19,7 +19,7 @@ process. Don't just follow along - you will be making a breadboard power supply 
 
 # Drawing the Schematic
 
-[Watch the schematic creation screencast](https://www.youtube.com/watch?v=SAGcpGdsB4c&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+[Watch the schematic creation screencast](https://www.youtube.com/watch?v=v-qCI8wv72w&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&index=1)
 
 Your first task is to produce the schematic below.
 If you want a 3.3v output use part AP1117D33. If you want 5v then use LM7805CT.
@@ -28,7 +28,8 @@ If you want a 3.3v output use part AP1117D33. If you want 5v then use LM7805CT.
 
 ## Tips
 
-* Don't bother naming components, that will happen automatically
+* Don't bother naming components, that will happen automatically when you
+ 'annotate components'
 * The regulator footprint is in the power_integrations library
 * Use the hot keys below!
 
@@ -48,8 +49,8 @@ If you want a 3.3v output use part AP1117D33. If you want 5v then use LM7805CT.
 ## Adding a library
 
 The barrel jack's PCB footprint will not be fabricated properly because
-OSHPark's fab don't do thin slots. You'll use a different footprint that's made
-with large holes.
+OSHPark's fab don't allow thin slots. You'll use a different footprint that uses
+large holes instead.
 
 Download the [barrel jack's modified footprint library](https://github.com/mattvenn/kicad/raw/master/breadboard-psu/barrel.zip)
 
@@ -67,7 +68,7 @@ files. The directory name ends in .pretty. The footprint files end in
 
 # Create the PCB
 
-[Watch the PCB creation screencast](https://www.youtube.com/watch?v=v-qCI8wv72w&index=1&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
+[Watch the PCB creation screencast](https://www.youtube.com/watch?v=Np3-4eBxWKM&index=2&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC)
 
 Example layout of the PCB:
 
