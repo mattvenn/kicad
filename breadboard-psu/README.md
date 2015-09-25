@@ -16,7 +16,6 @@ process. Don't just follow along - you will be making a breadboard power supply 
 
 ![photo](pcb-psu.jpg)
 
-
 # Drawing the Schematic
 
 [Watch the schematic creation screencast](https://www.youtube.com/watch?v=v-qCI8wv72w&list=PLmcDgdDpcaPjIBy60y22XzG036ckQI7bC&index=1)
