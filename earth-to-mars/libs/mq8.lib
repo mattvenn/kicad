@@ -1,0 +1,22 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# mq8
+#
+DEF mq8 U 0 40 Y Y 1 F N
+F0 "U" -100 400 60 H V C CNN
+F1 "mq8" -100 -150 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+S -350 350 100 -50 0 1 0 N
+X s+ 1 -550 250 200 R 50 50 1 1 I
+X h+ 2 -550 150 200 R 50 50 1 1 I
+X s+ 3 -550 50 200 R 50 50 1 1 I
+X s- 4 300 50 200 L 50 50 1 1 I
+X h- 5 300 150 200 L 50 50 1 1 I
+X s- 6 300 250 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
