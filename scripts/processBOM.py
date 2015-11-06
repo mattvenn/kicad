@@ -1,4 +1,5 @@
 #!/usr/bin/python
+from pprint import pprint
 import sys
 import csv
 if len(sys.argv)<2:
@@ -34,4 +35,4 @@ with open(bom_file,'r') as csvfile:
                     
             print ', '.join([row[7],str(int(row[1])*quantity),comment])
 print >>sys.stderr ,"processed %d rows with %d missing rows" % (rows, len(bad_rows))
-print >>sys.stderr , bad_rows
+print >>sys.stderr , pprint(bad_rows)
