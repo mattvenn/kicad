@@ -26,7 +26,7 @@ with open(bom_file,'r') as csvfile:
             bad_rows.append(row)
         else:
             #comment = row[4].replace(',','')[0:30-13]
-            comment = row[5] or row[4]
+            comment = row[5] or row[3]
             comment = comment[0:29]
             farnel_num = row[7]
             if farnel_num == "":
