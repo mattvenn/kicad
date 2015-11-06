@@ -44,7 +44,7 @@ out.writerow(['Ref', 'Qnty', 'Value', 'Cmp name', 'Footprint', 'Description', 'V
 # Get all of the components in groups of matching parts + values
 # (see ky_generic_netlist_reader.py)
 grouped = net.groupComponents()
-
+log_f = open(sys.argv[2] + ".log", 'w')
 # Output all of the component information
 for group in grouped:
     refs = ""
@@ -55,8 +55,12 @@ for group in grouped:
         refs += component.getRef() + ", "
         c = component
 
+    try:
+        farn_quant = int(c.getField("quant"))
+    except ValueError:
+        farn_quant = 1
     # Fill in the component groups common data
-    out.writerow([refs, len(group), c.getValue(), c.getPartName(), c.getFootprint(),
+    out.writerow([refs, len(group) * farn_quant, c.getValue(), c.getPartName(), c.getFootprint(),
         c.getDescription(), c.getField("Vendor"), c.getField("farnell #")])
 
 
