@@ -1,0 +1,36 @@
+zwork=-0.06 # where engraving happens
+offset=0.10
+cutter-diameter=0.2
+
+#probiing
+al-front=1
+al-back=1
+software=LinuxCNC
+al-x=10
+al-y=20
+al-probefeed=30
+extra-passes=0
+# general
+zchange=40
+zsafe=2
+metric=1
+metricoutput=1
+optimise=1
+
+# isolation milling
+mill-feed=150
+mill-vertfeed=40
+mill-speed=1000
+
+# milling outline
+zcut=-2
+cut-infeed=2
+cut-feed=100
+cut-speed=200
+
+# drilling
+onedrill=1
+drill-feed=40
+drill-speed=200
+zdrill=-2
+
