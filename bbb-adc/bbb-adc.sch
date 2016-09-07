@@ -339,8 +339,6 @@ NoConn ~ 5250 2350
 NoConn ~ 5250 2450
 NoConn ~ 5250 2550
 NoConn ~ 5250 2650
-NoConn ~ 5250 2750
-NoConn ~ 5250 2850
 NoConn ~ 5250 2950
 NoConn ~ 4750 1850
 NoConn ~ 4750 1950
@@ -387,10 +385,6 @@ Wire Wire Line
 	3350 3550 3800 3550
 Wire Wire Line
 	3350 3450 3800 3450
-Wire Wire Line
-	3350 3350 3800 3350
-Wire Wire Line
-	3350 3250 3800 3250
 $Comp
 L ads7883 adc1
 U 1 1 57CEDE6D
@@ -935,4 +929,36 @@ F 3 "" H 3800 3950 60  0000 C CNN
 	1    3800 3950
 	1    0    0    -1  
 $EndComp
+NoConn ~ 3350 3350
+NoConn ~ 3350 3250
+Text GLabel 3600 2750 0    60   Input ~ 0
+gpio1
+Text GLabel 3600 2900 0    60   Input ~ 0
+gpio2
+Wire Wire Line
+	3800 3350 3700 3350
+Wire Wire Line
+	3700 3350 3700 2900
+Wire Wire Line
+	3700 2900 3600 2900
+Wire Wire Line
+	3600 2750 3800 2750
+Wire Wire Line
+	3800 2750 3800 3250
+Text GLabel 5600 2500 2    60   Input ~ 0
+gpio1
+Text GLabel 5600 2650 2    60   Input ~ 0
+gpio2
+Wire Wire Line
+	5250 2850 5550 2850
+Wire Wire Line
+	5550 2850 5550 2650
+Wire Wire Line
+	5550 2650 5600 2650
+Wire Wire Line
+	5600 2500 5400 2500
+Wire Wire Line
+	5400 2500 5400 2750
+Wire Wire Line
+	5400 2750 5250 2750
 $EndSCHEMATC
