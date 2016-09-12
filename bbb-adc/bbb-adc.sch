@@ -117,17 +117,6 @@ Wire Wire Line
 	2500 1750 3100 1750
 NoConn ~ 7200 3050
 NoConn ~ 7700 3050
-$Comp
-L CONN_02X03 P9
-U 1 1 57CEC769
-P 3350 1850
-F 0 "P9" H 3350 2050 50  0000 C CNN
-F 1 "CONN_02X03" H 3350 1650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x03" H 3350 650 60  0001 C CNN
-F 3 "" H 3350 650 60  0000 C CNN
-	1    3350 1850
-	1    0    0    -1  
-$EndComp
 Wire Bus Line
 	4400 2800 4400 4200
 Wire Bus Line
@@ -548,8 +537,6 @@ Wire Wire Line
 Text GLabel 2550 2000 0    60   Input ~ 0
 bbb-5v
 Wire Wire Line
-	2700 1950 3100 1950
-Wire Wire Line
 	2700 1950 2700 2000
 Wire Wire Line
 	2700 2000 2550 2000
@@ -687,7 +674,7 @@ U 1 1 57CEE0C0
 P 9800 3850
 F 0 "U1" H 9750 3600 60  0000 C CNN
 F 1 "ref5050" H 9750 4350 60  0000 C CNN
-F 2 "fp:SOIC-8-N" H 9800 3850 60  0001 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 9800 3850 60  0001 C CNN
 F 3 "" H 9800 3850 60  0000 C CNN
 	1    9800 3850
 	1    0    0    -1  
@@ -759,7 +746,7 @@ U 1 1 57CEF070
 P 8800 1600
 F 0 "P1" H 8800 1800 50  0000 C CNN
 F 1 "CONN_01X03" V 8900 1600 50  0000 C CNN
-F 2 "" H 8800 1600 60  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 8800 1600 60  0001 C CNN
 F 3 "" H 8800 1600 60  0000 C CNN
 	1    8800 1600
 	1    0    0    -1  
@@ -816,7 +803,7 @@ U 1 1 57CF0A5D
 P 7450 1600
 F 0 "P2" H 7450 1750 50  0000 C CNN
 F 1 "CONN_01X02" V 7550 1600 50  0000 C CNN
-F 2 "" H 7450 1600 60  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7450 1600 60  0001 C CNN
 F 3 "" H 7450 1600 60  0000 C CNN
 	1    7450 1600
 	1    0    0    -1  
@@ -961,4 +948,118 @@ Wire Wire Line
 	5400 2500 5400 2750
 Wire Wire Line
 	5400 2750 5250 2750
+$Comp
+L TEST clk1
+U 1 1 57D6B146
+P 9500 5200
+F 0 "clk1" H 9500 5260 40  0000 C CNN
+F 1 "TEST" H 9500 5130 40  0000 C CNN
+F 2 "Measurement_Points:Test_Point" H 9500 5200 60  0001 C CNN
+F 3 "" H 9500 5200 60  0000 C CNN
+	1    9500 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST !cs1
+U 1 1 57D6B6B6
+P 9500 5400
+F 0 "!cs1" H 9500 5460 40  0000 C CNN
+F 1 "TEST" H 9500 5330 40  0000 C CNN
+F 2 "Measurement_Points:Test_Point" H 9500 5400 60  0001 C CNN
+F 3 "" H 9500 5400 60  0000 C CNN
+	1    9500 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST sdo1
+U 1 1 57D6B719
+P 9500 5600
+F 0 "sdo1" H 9500 5660 40  0000 C CNN
+F 1 "TEST" H 9500 5530 40  0000 C CNN
+F 2 "Measurement_Points:Test_Point" H 9500 5600 60  0001 C CNN
+F 3 "" H 9500 5600 60  0000 C CNN
+	1    9500 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST sdo2
+U 1 1 57D6B781
+P 9500 5800
+F 0 "sdo2" H 9500 5860 40  0000 C CNN
+F 1 "TEST" H 9500 5730 40  0000 C CNN
+F 2 "Measurement_Points:Test_Point" H 9500 5800 60  0001 C CNN
+F 3 "" H 9500 5800 60  0000 C CNN
+	1    9500 5800
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9700 5200
+NoConn ~ 9700 5400
+NoConn ~ 9700 5600
+NoConn ~ 9700 5800
+Text GLabel 9100 5200 0    60   Input ~ 0
+adc-clk
+Text GLabel 9100 5400 0    60   Input ~ 0
+adc-cs
+Text GLabel 9100 5600 0    60   Input ~ 0
+adc1-sdo
+Text GLabel 9100 5800 0    60   Input ~ 0
+adc2-sdo
+$Comp
+L TEST gnd1
+U 1 1 57D6BC3D
+P 9500 5000
+F 0 "gnd1" H 9500 5060 40  0000 C CNN
+F 1 "TEST" H 9500 4930 40  0000 C CNN
+F 2 "Measurement_Points:Test_Point" H 9500 5000 60  0001 C CNN
+F 3 "" H 9500 5000 60  0000 C CNN
+	1    9500 5000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9700 5000
+$Comp
+L Earth #PWR022
+U 1 1 57D6BCFB
+P 9100 5000
+F 0 "#PWR022" H 9100 4750 50  0001 C CNN
+F 1 "Earth" H 9100 4850 50  0001 C CNN
+F 2 "" H 9100 5000 60  0000 C CNN
+F 3 "" H 9100 5000 60  0000 C CNN
+	1    9100 5000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9100 5000 9300 5000
+Wire Wire Line
+	9100 5200 9300 5200
+Wire Wire Line
+	9100 5400 9300 5400
+Wire Wire Line
+	9100 5600 9300 5600
+Wire Wire Line
+	9100 5800 9300 5800
+$Comp
+L CONN_02X04 P9
+U 1 1 57D6B818
+P 3350 1900
+F 0 "P9" H 3350 2150 50  0000 C CNN
+F 1 "CONN_02X04" H 3350 1650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x04" H 3350 700 60  0001 C CNN
+F 3 "" H 3350 700 60  0000 C CNN
+	1    3350 1900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3100 1950
+Wire Wire Line
+	2700 1950 3000 1950
+Wire Wire Line
+	3000 1950 3000 2050
+Wire Wire Line
+	3000 2050 3100 2050
+Wire Wire Line
+	3600 2050 3600 2300
+Wire Wire Line
+	3600 2300 3050 2300
+Wire Wire Line
+	3050 2300 3050 2050
+Connection ~ 3050 2050
 $EndSCHEMATC
