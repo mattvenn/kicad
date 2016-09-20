@@ -301,12 +301,8 @@ F 3 "" H 4800 1400 60  0000 C CNN
 $EndComp
 Text Label 4900 1750 0    60   ~ 0
 dht11-data
-Text Label 4950 3650 0    60   ~ 0
-status
 Text Label 4950 3450 0    60   ~ 0
 dht11-data
-Text Label 4950 3850 0    60   ~ 0
-fan
 Wire Wire Line
 	5000 3150 5500 3150
 Wire Wire Line
@@ -487,8 +483,8 @@ L Q_NJFET_GDS Q1
 U 1 1 57E13E27
 P 3450 4550
 F 0 "Q1" H 3750 4600 50  0000 R CNN
-F 1 "IRLR3715ZPBF" H 4100 4500 50  0000 R CNN
-F 2 "TO_SOT_Packages_SMD:TO-252-2Lead" H 3650 4650 50  0001 C CNN
+F 1 "BUK98150-55A" H 4100 4500 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 3650 4650 50  0001 C CNN
 F 3 "" H 3450 4550 50  0000 C CNN
 	1    3450 4550
 	1    0    0    -1  
@@ -519,4 +515,8 @@ Text Label 4950 4050 0    60   ~ 0
 gpio2
 Wire Wire Line
 	4950 4050 5500 4050
+Text Label 4950 3650 0    60   ~ 0
+status
+Text Label 4950 3850 0    60   ~ 0
+fan
 $EndSCHEMATC
