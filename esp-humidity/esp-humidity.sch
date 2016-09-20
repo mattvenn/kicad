@@ -1,0 +1,504 @@
+EESchema Schematic File Version 2
+LIBS:esp-humidity-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:esp8266-breakout
+LIBS:dht11
+LIBS:esp-humidity-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L esp8266-breakout U2
+U 1 1 57E11A3B
+P 6250 3550
+F 0 "U2" H 5950 2700 60  0000 C CNN
+F 1 "esp8266-breakout" H 5900 4300 60  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x14" H 6250 3550 60  0001 C CNN
+F 3 "" H 6250 3550 60  0000 C CNN
+	1    6250 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR01
+U 1 1 57E11AA9
+P 5400 2950
+F 0 "#PWR01" H 5400 2700 50  0001 C CNN
+F 1 "Earth" H 5400 2800 50  0001 C CNN
+F 2 "" H 5400 2950 60  0000 C CNN
+F 3 "" H 5400 2950 60  0000 C CNN
+	1    5400 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L +12V #PWR02
+U 1 1 57E11ABF
+P 5200 3050
+F 0 "#PWR02" H 5200 2900 50  0001 C CNN
+F 1 "+12V" H 5200 3190 50  0000 C CNN
+F 2 "" H 5200 3050 60  0000 C CNN
+F 3 "" H 5200 3050 60  0000 C CNN
+	1    5200 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L BS107 Q1
+U 1 1 57E11AD9
+P 3450 4550
+F 0 "Q1" H 3650 4625 50  0000 L CNN
+F 1 "IRLR3715ZPBF" H 3650 4550 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:TO-252-2Lead" H 3650 4475 50  0000 L CIN
+F 3 "" H 3450 4550 50  0000 L CNN
+	1    3450 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D2
+U 1 1 57E11B2E
+P 2800 4800
+F 0 "D2" H 2800 4900 50  0000 C CNN
+F 1 "LED" H 2800 4700 50  0000 C CNN
+F 2 "LEDs:LED-5MM" H 2800 4800 60  0001 C CNN
+F 3 "" H 2800 4800 60  0000 C CNN
+	1    2800 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D1
+U 1 1 57E11B9A
+P 2750 3100
+F 0 "D1" H 2750 3200 50  0000 C CNN
+F 1 "LED" H 2750 3000 50  0000 C CNN
+F 2 "LEDs:LED-5MM" H 2750 3100 60  0001 C CNN
+F 3 "" H 2750 3100 60  0000 C CNN
+	1    2750 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L dht11 U1
+U 1 1 57E11C1F
+P 5850 1750
+F 0 "U1" H 5800 1400 60  0000 C CNN
+F 1 "dht11" H 5800 2000 60  0000 C CNN
+F 2 "fp:dht11" H 5850 1750 60  0001 C CNN
+F 3 "" H 5850 1750 60  0000 C CNN
+	1    5850 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR03
+U 1 1 57E11C9C
+P 5000 3150
+F 0 "#PWR03" H 5000 3000 50  0001 C CNN
+F 1 "+3.3V" H 5000 3290 50  0000 C CNN
+F 2 "" H 5000 3150 60  0000 C CNN
+F 3 "" H 5000 3150 60  0000 C CNN
+	1    5000 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR04
+U 1 1 57E11CBD
+P 5200 1650
+F 0 "#PWR04" H 5200 1500 50  0001 C CNN
+F 1 "+3.3V" H 5200 1790 50  0000 C CNN
+F 2 "" H 5200 1650 60  0000 C CNN
+F 3 "" H 5200 1650 60  0000 C CNN
+	1    5200 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR05
+U 1 1 57E11CD7
+P 5200 1950
+F 0 "#PWR05" H 5200 1700 50  0001 C CNN
+F 1 "Earth" H 5200 1800 50  0001 C CNN
+F 2 "" H 5200 1950 60  0000 C CNN
+F 3 "" H 5200 1950 60  0000 C CNN
+	1    5200 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR06
+U 1 1 57E11CF1
+P 2800 5150
+F 0 "#PWR06" H 2800 4900 50  0001 C CNN
+F 1 "Earth" H 2800 5000 50  0001 C CNN
+F 2 "" H 2800 5150 60  0000 C CNN
+F 3 "" H 2800 5150 60  0000 C CNN
+	1    2800 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR07
+U 1 1 57E11D0B
+P 2750 3400
+F 0 "#PWR07" H 2750 3150 50  0001 C CNN
+F 1 "Earth" H 2750 3250 50  0001 C CNN
+F 2 "" H 2750 3400 60  0000 C CNN
+F 3 "" H 2750 3400 60  0000 C CNN
+	1    2750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR08
+U 1 1 57E11D25
+P 3550 4850
+F 0 "#PWR08" H 3550 4600 50  0001 C CNN
+F 1 "Earth" H 3550 4700 50  0001 C CNN
+F 2 "" H 3550 4850 60  0000 C CNN
+F 3 "" H 3550 4850 60  0000 C CNN
+	1    3550 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR09
+U 1 1 57E11D3F
+P 2600 1750
+F 0 "#PWR09" H 2600 1500 50  0001 C CNN
+F 1 "Earth" H 2600 1600 50  0001 C CNN
+F 2 "" H 2600 1750 60  0000 C CNN
+F 3 "" H 2600 1750 60  0000 C CNN
+	1    2600 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR010
+U 1 1 57E11D59
+P 2600 1600
+F 0 "#PWR010" H 2600 1450 50  0001 C CNN
+F 1 "+12V" H 2600 1740 50  0000 C CNN
+F 2 "" H 2600 1600 60  0000 C CNN
+F 3 "" H 2600 1600 60  0000 C CNN
+	1    2600 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 power1
+U 1 1 57E11DE8
+P 3000 1700
+F 0 "power1" H 3000 1850 50  0000 C CNN
+F 1 "CONN_01X02" V 3100 1700 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 3000 1700 60  0001 C CNN
+F 3 "" H 3000 1700 60  0000 C CNN
+	1    3000 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 fan1
+U 1 1 57E11E2B
+P 3900 4250
+F 0 "fan1" H 3900 4400 50  0000 C CNN
+F 1 "CONN_01X02" V 4000 4250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 3900 4250 60  0001 C CNN
+F 3 "" H 3900 4250 60  0000 C CNN
+	1    3900 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT-RESCUE-esp-humidity RV1
+U 1 1 57E12016
+P 5200 4950
+F 0 "RV1" H 5200 4850 50  0000 C CNN
+F 1 "POT" H 5200 4950 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_VishaySpectrol-Econtrim-Type36M" H 5200 4950 60  0001 C CNN
+F 3 "" H 5200 4950 60  0000 C CNN
+	1    5200 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 57E12071
+P 2750 2650
+F 0 "R1" V 2830 2650 50  0000 C CNN
+F 1 "R" V 2750 2650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2680 2650 30  0001 C CNN
+F 3 "" H 2750 2650 30  0000 C CNN
+	1    2750 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 57E12108
+P 2800 4350
+F 0 "R2" V 2880 4350 50  0000 C CNN
+F 1 "R" V 2800 4350 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2730 4350 30  0001 C CNN
+F 3 "" H 2800 4350 30  0000 C CNN
+	1    2800 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 57E12192
+P 5200 4450
+F 0 "R5" V 5280 4450 50  0000 C CNN
+F 1 "R" V 5200 4450 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5130 4450 30  0001 C CNN
+F 3 "" H 5200 4450 30  0000 C CNN
+	1    5200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 57E1220B
+P 3100 4800
+F 0 "R3" V 3180 4800 50  0000 C CNN
+F 1 "R" V 3100 4800 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3030 4800 30  0001 C CNN
+F 3 "" H 3100 4800 30  0000 C CNN
+	1    3100 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 57E123CE
+P 4800 1600
+F 0 "R4" V 4880 1600 50  0000 C CNN
+F 1 "R" V 4800 1600 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4730 1600 30  0001 C CNN
+F 3 "" H 4800 1600 30  0000 C CNN
+	1    4800 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR011
+U 1 1 57E12484
+P 4800 1400
+F 0 "#PWR011" H 4800 1250 50  0001 C CNN
+F 1 "+3.3V" H 4800 1540 50  0000 C CNN
+F 2 "" H 4800 1400 60  0000 C CNN
+F 3 "" H 4800 1400 60  0000 C CNN
+	1    4800 1400
+	1    0    0    -1  
+$EndComp
+Text Label 4900 1750 0    60   ~ 0
+dht11-data
+Text Label 4950 3650 0    60   ~ 0
+status
+Text Label 4950 3450 0    60   ~ 0
+dht11-data
+Text Label 4950 3550 0    60   ~ 0
+fan
+Wire Wire Line
+	5000 3150 5500 3150
+Wire Wire Line
+	5400 2950 5500 2950
+Wire Wire Line
+	5200 3050 5500 3050
+Wire Wire Line
+	5200 1950 5450 1950
+Wire Wire Line
+	5200 1650 5450 1650
+Wire Wire Line
+	4800 1750 5450 1750
+Wire Wire Line
+	4950 3650 5500 3650
+Wire Wire Line
+	4800 1400 4800 1450
+Wire Wire Line
+	4950 3450 5500 3450
+Wire Wire Line
+	4950 3550 5500 3550
+Wire Wire Line
+	5500 4250 5500 4950
+Wire Wire Line
+	5500 4950 5350 4950
+Wire Wire Line
+	5200 4600 5200 4700
+$Comp
+L Earth #PWR012
+U 1 1 57E12665
+P 5200 5250
+F 0 "#PWR012" H 5200 5000 50  0001 C CNN
+F 1 "Earth" H 5200 5100 50  0001 C CNN
+F 2 "" H 5200 5250 60  0000 C CNN
+F 3 "" H 5200 5250 60  0000 C CNN
+	1    5200 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 5200 5200 5250
+$Comp
+L +3.3V #PWR013
+U 1 1 57E126C0
+P 5200 4200
+F 0 "#PWR013" H 5200 4050 50  0001 C CNN
+F 1 "+3.3V" H 5200 4340 50  0000 C CNN
+F 2 "" H 5200 4200 60  0000 C CNN
+F 3 "" H 5200 4200 60  0000 C CNN
+	1    5200 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 4200 5200 4300
+Wire Wire Line
+	2800 4500 2800 4600
+Wire Wire Line
+	2800 5000 2800 5150
+$Comp
+L Earth #PWR014
+U 1 1 57E1277E
+P 3100 5200
+F 0 "#PWR014" H 3100 4950 50  0001 C CNN
+F 1 "Earth" H 3100 5050 50  0001 C CNN
+F 2 "" H 3100 5200 60  0000 C CNN
+F 3 "" H 3100 5200 60  0000 C CNN
+	1    3100 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 4950 3100 5200
+Wire Wire Line
+	3250 4600 3100 4600
+Wire Wire Line
+	3100 4200 3100 4650
+Wire Wire Line
+	2800 4200 3100 4200
+Connection ~ 3100 4600
+Text Label 2850 4200 0    60   ~ 0
+fan
+Wire Wire Line
+	3550 4350 3550 4300
+Wire Wire Line
+	3550 4300 3700 4300
+$Comp
+L +12V #PWR015
+U 1 1 57E12855
+P 3700 4050
+F 0 "#PWR015" H 3700 3900 50  0001 C CNN
+F 1 "+12V" H 3700 4190 50  0000 C CNN
+F 2 "" H 3700 4050 60  0000 C CNN
+F 3 "" H 3700 4050 60  0000 C CNN
+	1    3700 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4050 3700 4200
+Wire Wire Line
+	2750 3300 2750 3400
+Wire Wire Line
+	2750 2800 2750 2900
+Wire Wire Line
+	2750 2250 2750 2500
+Wire Wire Line
+	2600 1600 2800 1600
+Wire Wire Line
+	2800 1450 2800 1650
+Wire Wire Line
+	2600 1750 2800 1750
+Text Label 2750 2400 0    60   ~ 0
+status
+NoConn ~ 5450 1850
+NoConn ~ 5500 3250
+NoConn ~ 5500 3350
+NoConn ~ 5500 3950
+NoConn ~ 5500 4050
+NoConn ~ 5500 4150
+$Comp
+L CONN_01X04 gpio1
+U 1 1 57E12D7B
+P 4550 3900
+F 0 "gpio1" H 4550 4150 50  0000 C CNN
+F 1 "CONN_01X04" V 4650 3900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 4550 3900 60  0001 C CNN
+F 3 "" H 4550 3900 60  0000 C CNN
+	1    4550 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4750 3750 5500 3750
+Wire Wire Line
+	4750 3850 5500 3850
+$Comp
+L +3.3V #PWR016
+U 1 1 57E12E8E
+P 4850 3950
+F 0 "#PWR016" H 4850 3800 50  0001 C CNN
+F 1 "+3.3V" H 4850 4090 50  0000 C CNN
+F 2 "" H 4850 3950 60  0000 C CNN
+F 3 "" H 4850 3950 60  0000 C CNN
+	1    4850 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 4050 4900 4050
+$Comp
+L Earth #PWR017
+U 1 1 57E12EF4
+P 4900 4050
+F 0 "#PWR017" H 4900 3800 50  0001 C CNN
+F 1 "Earth" H 4900 3900 50  0001 C CNN
+F 2 "" H 4900 4050 60  0000 C CNN
+F 3 "" H 4900 4050 60  0000 C CNN
+	1    4900 4050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4750 3950 4850 3950
+Wire Wire Line
+	3550 4750 3550 4850
+$Comp
+L PWR_FLAG #FLG018
+U 1 1 57E1335E
+P 2800 1450
+F 0 "#FLG018" H 2800 1545 50  0001 C CNN
+F 1 "PWR_FLAG" H 2800 1630 50  0000 C CNN
+F 2 "" H 2800 1450 60  0000 C CNN
+F 3 "" H 2800 1450 60  0000 C CNN
+	1    2800 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG019
+U 1 1 57E13434
+P 2800 1950
+F 0 "#FLG019" H 2800 2045 50  0001 C CNN
+F 1 "PWR_FLAG" H 2800 2130 50  0000 C CNN
+F 2 "" H 2800 1950 60  0000 C CNN
+F 3 "" H 2800 1950 60  0000 C CNN
+	1    2800 1950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 1750 2800 1950
+Connection ~ 2800 1600
+$EndSCHEMATC
