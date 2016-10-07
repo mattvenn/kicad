@@ -189,9 +189,9 @@ F 3 "" H 8300 4000 60  0000 C CNN
 	1    8300 4000
 	1    0    0    -1  
 $EndComp
-Text GLabel 7050 2850 2    60   Input ~ 0
+Text GLabel 7950 2950 2    60   Input ~ 0
 miso
-Text GLabel 7050 2950 2    60   Input ~ 0
+Text GLabel 7950 2850 2    60   Input ~ 0
 mosi
 Text GLabel 7050 3050 2    60   Input ~ 0
 sck
@@ -990,10 +990,10 @@ Connection ~ 4700 2100
 Wire Wire Line
 	6800 4650 7050 4650
 Wire Wire Line
-	7450 2850 6950 2850
+	6950 2850 7950 2850
 Connection ~ 6950 2850
 Wire Wire Line
-	7450 2950 6950 2950
+	6950 2950 7950 2950
 Connection ~ 6950 2950
 Wire Wire Line
 	1350 5900 1350 6050
