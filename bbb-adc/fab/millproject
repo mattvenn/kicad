@@ -1,14 +1,13 @@
-zwork=-0.06 # where engraving happens
-offset=0.10
+zwork=-0.065 # where engraving happens
+offset=0.05
 
 #probing
 al-front=1
 al-back=1
 software=LinuxCNC
-al-x=15
-al-y=15
+al-x=10
+al-y=10
 al-probefeed=30
-extra-passes=0
 
 # general
 zchange=40
@@ -16,6 +15,7 @@ zsafe=2
 metric=1
 metricoutput=1
 optimise=1
+extra-passes=1
 
 # isolation milling
 mill-feed=150
@@ -34,5 +34,4 @@ onedrill=1
 drill-feed=80
 drill-speed=200
 zdrill=-2.1
-drill-side=front
 
