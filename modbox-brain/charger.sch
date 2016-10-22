@@ -30,8 +30,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:esp8266-12
-LIBS:cp2102-cache
 LIBS:mcp73831t
+LIBS:cp2102
 LIBS:modbox-brain-cache
 EELAYER 25 0
 EELAYER END

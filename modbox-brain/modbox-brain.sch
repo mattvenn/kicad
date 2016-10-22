@@ -30,8 +30,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:esp8266-12
-LIBS:cp2102-cache
 LIBS:mcp73831t
+LIBS:cp2102
 LIBS:modbox-brain-cache
 EELAYER 25 0
 EELAYER END
@@ -102,8 +102,6 @@ Text Label 9250 2450 0    60   ~ 0
 gpio0
 Text Label 9250 2650 0    60   ~ 0
 gpio15
-Text Label 9250 2350 0    60   ~ 0
-gpio4
 Text Label 7600 2350 0    60   ~ 0
 gpio16
 Text Label 7600 2650 0    60   ~ 0
@@ -270,8 +268,6 @@ Text GLabel 9500 2150 2    60   Input ~ 0
 tx
 Text GLabel 7350 2150 0    60   Input ~ 0
 adc
-Text Label 9250 2250 0    60   ~ 0
-gpio5
 Text GLabel 7350 2450 0    60   Input ~ 0
 charge_safe
 Wire Wire Line
@@ -410,4 +406,8 @@ Text Label 4700 2550 0    60   ~ 0
 sda
 Text Label 7000 2550 0    60   ~ 0
 i2c-bus-power
+Text Label 9800 2250 0    60   ~ 0
+scl
+Text Label 9800 2350 0    60   ~ 0
+sda
 $EndSCHEMATC
