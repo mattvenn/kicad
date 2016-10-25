@@ -269,7 +269,7 @@ tx
 Text GLabel 7350 2150 0    60   Input ~ 0
 adc
 Text GLabel 7350 2450 0    60   Input ~ 0
-charge_safe
+charge
 Wire Wire Line
 	7300 2750 7900 2750
 Wire Wire Line
@@ -410,4 +410,45 @@ Text Label 9800 2250 0    60   ~ 0
 scl
 Text Label 9800 2350 0    60   ~ 0
 sda
+$Comp
+L LED D2
+U 1 1 580F3FD1
+P 2350 1850
+F 0 "D2" H 2350 1950 50  0000 C CNN
+F 1 "LED" H 2350 1750 50  0000 C CNN
+F 2 "LEDs:LED-1206" H 2350 1850 60  0001 C CNN
+F 3 "" H 2350 1850 60  0000 C CNN
+F 4 "2290335" H 2350 1850 60  0001 C CNN "farnell #"
+	1    2350 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R8
+U 1 1 580F3FD9
+P 2350 2200
+F 0 "R8" V 2430 2200 50  0000 C CNN
+F 1 "68r" V 2350 2200 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 2280 2200 30  0001 C CNN
+F 3 "" H 2350 2200 30  0000 C CNN
+F 4 "9336800" H 2350 2200 60  0001 C CNN "farnell #"
+	1    2350 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR09
+U 1 1 580F3FE0
+P 2350 1600
+F 0 "#PWR09" H 2350 1450 50  0001 C CNN
+F 1 "+5V" H 2350 1740 50  0000 C CNN
+F 2 "" H 2350 1600 60  0000 C CNN
+F 3 "" H 2350 1600 60  0000 C CNN
+	1    2350 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1650 2350 1600
+Wire Wire Line
+	2200 2600 2350 2600
+Wire Wire Line
+	2350 2600 2350 2350
 $EndSCHEMATC
