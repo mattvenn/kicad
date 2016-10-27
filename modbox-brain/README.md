@@ -1,3 +1,47 @@
+# states
+
+    off -> on with vusb -> vusb goes off -> timeout -> off
+    off -> on with battery -> timeout -> off
+
+## off
+
+lowest power, no indicators
+
+## plugged in with usb
+
+immediate indicator that plugging in has worked, either:
+
+* red charge led shows charging, or
+* green charge complete led shows charge complete
+
+## on
+
+immediate indicator of on-ness via blue status led:
+
+* comes on asap to show system is working. 
+* pulses low while wifi connects, goes off when wifi connected
+* flashes whenever mqtt messages exchanged
+
+## with battery low
+
+indicator of battery low with separate red led:
+
+* getting low, flash
+* too low, on
+
+# IO for power management
+
+inputs:
+
+* vusb via divider
+* vbat adc via enable mosfet
+
+outputs:
+
+* enable output for adc enable and reg enable
+
+use a regulator with an enable pin
+
 # esp8266 bootup notes
 
 ## my breakout board 
