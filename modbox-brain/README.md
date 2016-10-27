@@ -1,3 +1,12 @@
+# power consideration
+
+esp uses about 100ma when on with wifi
+lcd board will use about 50ma
+knobs with all leds will use about 100ma with 5ma led current
+guess that buttons will be about half knobs = 50ma (less leds)
+
+2 lcds + 2 knobs + button + brain = 450ma max
+
 # states
 
     off -> on with vusb -> vusb goes off -> timeout -> off
