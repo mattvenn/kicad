@@ -3,7 +3,7 @@
   (general
     (links 82)
     (no_connects 0)
-    (area 112.511474 39.14 219.490046 97.100001)
+    (area 114.949999 49.949999 215.050001 90.050001)
     (thickness 1.6)
     (drawings 52)
     (tracks 293)
@@ -1186,7 +1186,7 @@
   (gr_text ven.nz/modbox (at 202.6 87.9) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (gr_text "encoder v0.1" (at 130.1 87.8) (layer F.SilkS)
+  (gr_text "lcd v0.1" (at 130.1 87.8) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_line (start 115 51) (end 116 50) (angle 90) (layer Edge.Cuts) (width 0.1))
