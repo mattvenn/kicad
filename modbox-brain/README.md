@@ -15,7 +15,9 @@ as big, so supply should provide 100ma to 1000ma.
 Initial idea was to use an LDO with enable as with lipo this will provide
 between 80 & 90% efficiency. However, as unit may run continuously on 5v,
 efficiency drops to 70%. Switched to using a [TI LMR10510 buck
-regulator](http://www.ti.com/lit/ds/symlink/lmr10510.pdf), which should provide 
+regulator](http://www.ti.com/lit/ds/symlink/lmr10510.pdf), which should provide
+90%, though datasheet doesn't show how efficiency varies with changing input
+voltage.
 
 # states & indicators
 
