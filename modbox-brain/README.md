@@ -1,13 +1,23 @@
+# schematic
+
+[pdf](schematic.pdf)
+
 # power consideration
 
-esp uses about 100ma when on with wifi
+ESP8266 uses about 100ma when on with wifi
 lcd board will use about 50ma
 knobs with all leds will use about 100ma with 5ma led current
 guess that buttons will be about half knobs = 50ma (less leds)
 
-2 lcds + 2 knobs + button + brain = 450ma max
+2 lcds + 2 knobs + button + brain = 450ma max, easy to imagine something twice
+as big, so supply should provide 100ma to 1000ma.
 
-# states
+Initial idea was to use an LDO with enable as with lipo this will provide
+between 80 & 90% efficiency. However, as unit may run continuously on 5v,
+efficiency drops to 70%. Switched to using a [TI LMR10510 buck
+regulator](http://www.ti.com/lit/ds/symlink/lmr10510.pdf), which should provide 
+
+# states & indicators
 
     off -> on with vusb -> vusb goes off -> timeout -> off
     off -> on with battery -> timeout -> off
@@ -48,61 +58,28 @@ inputs:
 outputs:
 
 * enable output for adc enable and reg enable
+* low batt led
 
-use a regulator with an enable pin
+# esp8266 flash with nodemcu style gpio control
 
-# esp8266 bootup notes
+* gpio15 must be low, gpio2 must be high
+* gpio0 high -> run mode
+* gpio0 low -> flash mode
+* gpio16 tied to reset for sleep mode wake up
 
-## my breakout board 
+cp2102 dtr & rts control 2 transistors that control reset and gpio0
 
-gpio2 tied high with 10k
-ch_pd tied high with 10k
-gpio15 tied to gnd via 10k
-gpio0 via a button to gnd
-reset high via 10k and via 1uf cap to dtr on serial
+Tested by building transistor circuit copied from nodemcu schematic esp12 v0.9
+20/11/2014.
 
-have plenty of problems with uploading, plus need to expose a button and press at the right time
-
-## nodemcu board
-
-gpio0 high via 12k
-gpio2 high via 12k
-en (ch_pd pin 3) high via 12k
-reset high via 12k and 470p cap to gnd
-
-dtr & rts control 2 transistors that control rset and gpio0
-
-notes say:
-gpio15 must be low, gpio2 must be high
-gpio0 high -> run mode
-gpio0 low -> flash mode
-gpio16 tied to reset for sleep mode wake up
-
-tested by building transistor circuit copied from nodemcu schematic esp12 v0.9 20/11/2014
 boardtype in arduino is nodemcu 0.9 (uses nodemcu for board type with esptool)
+
 tested with cp1202 chip on breakout
 [tests results](esp-prog-test/nodemcu-results) = 18/20 success
 
-serial works too
+serial output works too
 
-## ck board with esptool and my board
+## usb current settings 
 
-gpio2 tied high with 10k
-ch_pd tied high with 10k
-gpio15 tied to gnd via 10k
-gpio0 via a button to gnd
-reset high via 10k 
-
-rts -> reset
-dtr -> gpio0
-
-tested with cp1202 (dcl0k9) chip on breakout
-
-boardtype in arduino is generic (uses ck for board type with esptool)
-[tests results](esp-prog-test/ck-results) = 18/20 success
-
-downside is that opening serial monitor in arduino will put the board into bootloader mode
-
-## usb programmer
-
-thanks to https://github.com/Lembed/Usb-Serial-Breakout-Cp2102
+able to set max current to cp2102 with [this tool]
+(https://github.com/Lembed/Usb-Serial-Breakout-Cp2102)
