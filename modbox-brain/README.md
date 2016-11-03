@@ -19,6 +19,7 @@ regulator](http://www.ti.com/lit/ds/symlink/lmr10510.pdf), which should provide
 90%, though datasheet doesn't show how efficiency varies with changing input
 voltage.
 
+
 # states & indicators
 
     off -> on with vusb -> vusb goes off -> timeout -> off
