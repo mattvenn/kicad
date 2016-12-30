@@ -1062,4 +1062,6 @@ Wire Wire Line
 Wire Wire Line
 	3050 2300 3050 2050
 Connection ~ 3050 2050
+Text Notes 7325 6850 0    118  ~ 0
+Comsafe ADC board
 $EndSCHEMATC

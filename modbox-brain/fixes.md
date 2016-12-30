@@ -3,7 +3,8 @@
 * Q1 p mos should be same fp and part as q4
 * cp2102 didn't work from farnell (could easily be soldering issue - done with
 iron/hot air rather than oven). Worked with baite board's cp2102
-* adc potential divider switch, when off, 0.2ma current still flows to adc. adc input R is 3.3M
+* adc potential divider switch, when off, 0.2ma current still flows to adc. adc
+ input R is 3.3M on another module. Removing r15 stops the current leakage
 
 # Improvements
 

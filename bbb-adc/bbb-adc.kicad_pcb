@@ -1,9 +1,9 @@
 (kicad_pcb (version 4) (host pcbnew "(2015-06-25 BZR 5821)-product")
 
   (general
-    (links 157)
+    (links 147)
     (no_connects 4)
-    (area 113.832143 45.949999 190.500001 124.050001)
+    (area 121.764667 45.949999 190.500001 124.050001)
     (thickness 1.6)
     (drawings 14)
     (tracks 233)
@@ -1825,11 +1825,11 @@
     )
   )
 
-  (module Mounting_Holes:MountingHole_3mm (layer F.Cu) (tedit 0) (tstamp 57D19693)
+  (module Mounting_Holes:MountingHole_3mm (layer F.Cu) (tedit 58244852) (tstamp 57D19693)
     (at 131 117)
     (descr "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
     (tags "Mounting hole, Befestigungsbohrung, 3mm, No Annular, Kein Restring,")
-    (fp_text reference REF** (at -14.75 -3) (layer F.SilkS)
+    (fp_text reference REF** (at 0 1) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MountingHole_3mm (at 1.00076 5.00126) (layer F.Fab)
