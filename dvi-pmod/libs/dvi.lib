@@ -1,0 +1,45 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# dvi
+#
+DEF dvi U 0 40 Y Y 1 F N
+F0 "U" 0 -300 60 H V C CNN
+F1 "dvi" 0 300 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S -300 450 1050 -2200 0 1 0 N
+X link1_red_- 1 -500 250 200 R 50 50 1 1 I
+X link1_red_+ 2 -500 150 200 R 50 50 1 1 I
+X 2/4_shield 3 -500 50 200 R 50 50 1 1 I
+X link2_green_- 4 -500 -50 200 R 50 50 1 1 I
+X link2_green_+ 5 -500 -150 200 R 50 50 1 1 I
+X ddc_clock 6 -500 -250 200 R 50 50 1 1 I
+X ddc_data 7 -500 -350 200 R 50 50 1 1 I
+X ana_vert_sync 8 -500 -450 200 R 50 50 1 1 I
+X link1_green_- 9 -500 -550 200 R 50 50 1 1 I
+X link1_green+ 10 -500 -650 200 R 50 50 1 1 I
+X link2_red_- 20 -500 -1650 200 R 50 50 1 1 I
+X 1/3_shield 11 -500 -750 200 R 50 50 1 1 I
+X link2_red_- 21 -500 -1750 200 R 50 50 1 1 I
+X ana_red c1 1250 -550 200 L 50 50 1 1 I
+X link2_blue_- 12 -500 -850 200 R 50 50 1 1 I
+X shield_clock 22 -500 -1850 200 R 50 50 1 1 I
+X ana_green c2 1250 -650 200 L 50 50 1 1 I
+X link2_blue_+ 13 -500 -950 200 R 50 50 1 1 I
+X clock+ 23 -500 -1950 200 R 50 50 1 1 I
+X ana_blue c3 1250 -750 200 L 50 50 1 1 I
+X +5v_standby 14 -500 -1050 200 R 50 50 1 1 I
+X clock- 24 -500 -2050 200 R 50 50 1 1 I
+X ana_horiz_sync c4 1250 -850 200 L 50 50 1 1 I
+X gnd_for_sync_and_standby 15 -500 -1150 200 R 50 50 1 1 I
+X ana_gnd c5 1250 -950 200 L 50 50 1 1 I
+X hotplug_detect 16 -500 -1250 200 R 50 50 1 1 I
+X link1_blue_- 17 -500 -1350 200 R 50 50 1 1 I
+X link1_blue_+ 18 -500 -1450 200 R 50 50 1 1 I
+X shield_0/5 19 -500 -1550 200 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
