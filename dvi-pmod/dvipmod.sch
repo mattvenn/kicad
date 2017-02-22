@@ -30,7 +30,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:dvi
 LIBS:dvipmod-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -196,11 +196,11 @@ Wire Wire Line
 Wire Wire Line
 	3600 4250 3750 4250
 $Comp
-L C C1
+L C 0.1u
 U 1 1 58930D3C
 P 4550 2300
-F 0 "C1" H 4575 2400 50  0000 L CNN
-F 1 "C" H 4575 2200 50  0000 L CNN
+F 0 "0.1u" V 4350 2200 50  0000 L CNN
+F 1 "0.1uf" H 4575 2200 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1206_HandSoldering" H 4588 2150 50  0001 C CNN
 F 3 "" H 4550 2300 50  0000 C CNN
 	1    4550 2300
@@ -222,7 +222,7 @@ L R R1
 U 1 1 58930E2C
 P 4850 2450
 F 0 "R1" V 4930 2450 50  0000 C CNN
-F 1 "R" V 4850 2450 50  0000 C CNN
+F 1 "100R" V 4850 2450 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206_HandSoldering" V 4780 2450 50  0001 C CNN
 F 3 "" H 4850 2450 50  0000 C CNN
 	1    4850 2450
@@ -496,5 +496,5 @@ F 3 "" H 4600 2600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 4600 1950 0    60   ~ 0
-ac coupling
+ac coupling with 0.1uf caps\n
 $EndSCHEMATC
