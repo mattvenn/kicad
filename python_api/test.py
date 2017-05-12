@@ -1,23 +1,14 @@
 import pcbnew
+from pcbnew import TEXTE_MODULE, TEXTE_PCB, EDA_TEXT
 
+"""
+good resources:
+
+* http://ci.kicad-pcb.org/job/kicad-doxygen/ws/build/pcbnew/doxygen-python/html/index.html
+* https://kicad.mmccoo.com/2017/02/01/the-basics-of-scripting-in-pcbnew/
+"""
 # most queries start with a board
 SCALE = 1000000
-"""
-board = pcbnew.GetBoard()
-print("hello")
-
-boardbbox = board.ComputeBoundingBox()
-boardxl = boardbbox.GetX()
-boardyl = boardbbox.GetY()
-boardwidth = boardbbox.GetWidth()
-boardheight = boardbbox.GetHeight()
-
-print("this board is at position {},{} {} wide and {} high".format(boardxl,
-    boardyl,
-    boardwidth,
-    boardheight))
-
-"""
 
 def add_tracks():
     layertable = get_layertable()
@@ -32,34 +23,36 @@ def add_tracks():
     pcbnew.Refresh()
 
 
-"""
-#edge cuts
-edgecut = layertable['F.Mask']
+def edge_cuts():
+    layertable = get_layertable()
+    board = pcbnew.GetBoard()
+    #edge cuts
+    edgecut = layertable['F.Mask']
 
-seg1 = pcbnew.DRAWSEGMENT(board)
-board.Add(seg1)
-seg1.SetStart(pcbnew.wxPoint(0, 0))
-seg1.SetEnd( pcbnew.wxPoint(100*SCALE, 0))
-seg1.SetLayer(edgecut)
+    seg1 = pcbnew.DRAWSEGMENT(board)
+    board.Add(seg1)
+    seg1.SetStart(pcbnew.wxPoint(0, 0))
+    seg1.SetEnd( pcbnew.wxPoint(100*SCALE, 0))
+    seg1.SetLayer(edgecut)
 
-seg1 = pcbnew.DRAWSEGMENT(board)
-board.Add(seg1)
-seg1.SetStart(pcbnew.wxPoint(100*SCALE,0))
-seg1.SetEnd( pcbnew.wxPoint(100*SCALE, 100*SCALE))
-seg1.SetLayer(edgecut)
+    seg1 = pcbnew.DRAWSEGMENT(board)
+    board.Add(seg1)
+    seg1.SetStart(pcbnew.wxPoint(100*SCALE,0))
+    seg1.SetEnd( pcbnew.wxPoint(100*SCALE, 100*SCALE))
+    seg1.SetLayer(edgecut)
 
-seg1 = pcbnew.DRAWSEGMENT(board)
-board.Add(seg1)
-seg1.SetStart( pcbnew.wxPoint(100*SCALE, 100*SCALE))
-seg1.SetEnd( pcbnew.wxPoint(0, 100*SCALE))
-seg1.SetLayer(edgecut)
+    seg1 = pcbnew.DRAWSEGMENT(board)
+    board.Add(seg1)
+    seg1.SetStart( pcbnew.wxPoint(100*SCALE, 100*SCALE))
+    seg1.SetEnd( pcbnew.wxPoint(0, 100*SCALE))
+    seg1.SetLayer(edgecut)
 
-seg1 = pcbnew.DRAWSEGMENT(board)
-board.Add(seg1)
-seg1.SetStart( pcbnew.wxPoint(0, 100*SCALE))
-seg1.SetEnd( pcbnew.wxPoint(0, 0))
-seg1.SetLayer(edgecut)
-"""
+    seg1 = pcbnew.DRAWSEGMENT(board)
+    board.Add(seg1)
+    seg1.SetStart( pcbnew.wxPoint(0, 100*SCALE))
+    seg1.SetEnd( pcbnew.wxPoint(0, 0))
+    seg1.SetLayer(edgecut)
+    pcbnew.Refresh()
 
 def get_layertable():
     layertable = {}
@@ -70,6 +63,13 @@ def get_layertable():
         layertable[board.GetLayerName(i)] = i
 #        print("{} {}".format(i, board.GetLayerName(i)))
     return layertable
+
+def get_drawings():
+    board = pcbnew.GetBoard()
+    drawings = board.GetDrawings()
+    for item in drawings:
+        if type(item) is TEXTE_MODULE or type(item) is TEXTE_PCB or type(item) is EDA_TEXT:
+            print(item.GetWidth())
 
 def write_text():
 
@@ -85,14 +85,6 @@ def write_text():
         text.SetLayer(layertable["F.SilkS"])
         board.Add(text)
     pcbnew.Refresh()
-
-from pcbnew import TEXTE_MODULE, TEXTE_PCB, EDA_TEXT
-def get_drawings():
-    board = pcbnew.GetBoard()
-    drawings = board.GetDrawings()
-    for item in drawings:
-        if type(item) is TEXTE_MODULE or type(item) is TEXTE_PCB or type(item) is EDA_TEXT:
-            print(item.GetWidth())
 
 
 def add_vias():
@@ -113,10 +105,8 @@ def add_vias():
 
 # add a filled poly to f mask
 def get_area():
-
     board = pcbnew.GetBoard()
     layertable = get_layertable()
-
 
     newarea = board.InsertArea(0, 0, layertable["F.Mask"], 0, 0, pcbnew.CPolyLine.DIAGONAL_EDGE)
 
