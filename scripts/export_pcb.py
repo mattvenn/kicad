@@ -5,6 +5,7 @@ import datetime
 import subprocess
 import os
 
+from action_menu_text_by_date import text_by_date
 from pcbnew import TEXTE_MODULE, TEXTE_PCB, EDA_TEXT, FromMM, ToMM
 from ConfigParser import ConfigParser, NoSectionError   
 
@@ -85,7 +86,7 @@ def plot(brd, args):
         ( "CuBottom",   pcbnew.B_Cu,        "Bottom layer", True,   True,  True ),
         ( "CuTop",      pcbnew.F_Cu,        "Top layer",    True,   True,   True ),
         ( "SilkTop",    pcbnew.F_SilkS,     "Silk top",     False,  True,   True ),
-#        ( "SilkBottom", pcbnew.B_SilkS,     "Silk top",     False,  False,  True ),
+        ( "SilkBottom", pcbnew.B_SilkS,     "Silk bottom",  False,  False,  True ),
         ( "EdgeCuts",   pcbnew.Edge_Cuts,   "Edges",        False,  True,   True ),
         ( "User",       pcbnew.Cmts_User,   "User",         False,  True,   False ),
     ]
@@ -144,11 +145,19 @@ if __name__ == '__main__':
         exit("couldn't find board automatically, please use --board to choose")
 
     if os.path.exists(args.output_dir):
-        exit("path already exists")
+        exit("path already exists: %s" % args.output_dir)
     else:
         os.makedirs(args.output_dir)
 
     brd = pcbnew.LoadBoard(args.board)
+
+    # update git version
+    git_version = subprocess.check_output(['git', 'log', '--pretty=format:"%h"', '-n', '1']).decode('utf-8')
+    for draw in brd.GetDrawings():
+        if isinstance(draw, pcbnew.TEXTE_PCB):
+            if draw.GetText().startswith("$ver$"): # .starts_with("$ver$"):
+                draw.SetText( "$ver$ %s %s" % (git_version, datetime.date.today() ))
+                
     plot(brd, args)
     write_overview(brd)
     zip_it()
