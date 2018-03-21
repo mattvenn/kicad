@@ -4,6 +4,18 @@
 * run ./export_pcb.py - will auto detect kicad_pcb files
 * will auto create an auto-fab directory and zip it
 
+## problems? 
+
+* run with same version of python that kicad uses (2.7)
+* needs the config.rc in the same directory
+* older version of kicad doesn't know about drill merge option
+* older version of kicad uses board.GetBoundingBox()
+* needs pandoc and latex for pdf output
+
+## todo
+
+update the git tag on the board if there is one.
+
 # processBom.py: Put farnell numbers in schematic
 
 * `prefs -> options -> template field names`

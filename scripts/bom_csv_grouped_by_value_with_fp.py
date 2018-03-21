@@ -34,11 +34,11 @@ except IOError:
 out = csv.writer(f, lineterminator='\n', delimiter=',', quotechar='\"', quoting=csv.QUOTE_ALL)
 
 # Output a set of rows for a header providing general information
-out.writerow(['Source:', net.getSource()])
-out.writerow(['Date:', net.getDate()])
-out.writerow(['Tool:', net.getTool()])
-out.writerow( ['Generator:', sys.argv[0]] )
-out.writerow(['Component Count:', len(net.components)])
+#out.writerow(['Source:', net.getSource()])
+#out.writerow(['Date:', net.getDate()])
+#out.writerow(['Tool:', net.getTool()])
+#out.writerow( ['Generator:', sys.argv[0]] )
+#out.writerow(['Component Count:', len(net.components)])
 out.writerow(['Ref', 'Qnty', 'Value', 'Cmp name', 'Footprint', 'Description', 'Vendor', 'farnell #'])
 
 # Get all of the components in groups of matching parts + values

@@ -5,7 +5,6 @@ import datetime
 import subprocess
 import os
 
-from action_menu_text_by_date import text_by_date
 from pcbnew import TEXTE_MODULE, TEXTE_PCB, EDA_TEXT, FromMM, ToMM
 from ConfigParser import ConfigParser, NoSectionError   
 
@@ -30,6 +29,7 @@ def get_board_name():
     return args.board.replace('.kicad_pcb','')
 
 def calculate_size(brd):
+    # older kicad is brd.GetBoundingBox()
     bb = brd.GetBoardEdgesBoundingBox()
     w = bb.GetWidth()
     h = bb.GetHeight()
@@ -103,6 +103,7 @@ def plot(brd, args):
     # drill
     # https://github.com/KiCad/kicad-source-mirror/blob/afe92c7bfc9d02d551b2cfa675e73d18b956f010/pcbnew/dialogs/dialog_gendrill.cpp#L403
     drill = pcbnew.EXCELLON_WRITER(brd)
+    # older kicad doesn't know about MergeOption
     drill.SetMergeOption(True)
     drill.SetFormat(True, drill.DECIMAL_FORMAT, 0, 0)
     drill.CreateDrillandMapFilesSet(args.output_dir, True, False)
