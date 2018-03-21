@@ -18,21 +18,24 @@ with open(bom_file,'r') as csvfile:
     for row in reader:
         #check for errors
         rows += 1
-        if rows < 7:
+        if rows < 2:
+            # parse the header
+            #import ipdb ; ipdb.set_trace()
+            farnell_col = row.index('farnell #')
+            comment_col = row.index('Description')
+            qnty_col = row.index('Qnty')
             continue
-        #check row length, should be 8
-        if len(row) != 8:
-            print >> sys.stderr, "bad row length: ", row
-            bad_rows.append(row)
         else:
-            #comment = row[4].replace(',','')[0:30-13]
-            comment = row[5] or row[3]
-            comment = comment[0:29]
-            farnel_num = row[7]
+            comment = row[comment_col][0:29]
+            farnel_num = row[farnell_col]
+            if farnel_num == 'dnp':
+                continue
             if farnel_num == "":
                 bad_rows.append(row)
                 continue
+            qnty = int(row[qnty_col])
                     
-            print ', '.join([row[7],str(int(row[1])*quantity),comment])
+            print ', '.join([farnel_num, str(int(qnty)*quantity), comment])
 print >>sys.stderr ,"processed %d rows with %d missing rows" % (rows, len(bad_rows))
-print >>sys.stderr , pprint(bad_rows)
+for row in bad_rows:
+    print(row, sys.stderr)
