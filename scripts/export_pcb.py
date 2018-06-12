@@ -28,6 +28,9 @@ def zip_it():
 def get_board_name():
     return args.board.replace('.kicad_pcb','')
 
+def get_nice_name():
+    return config.get('meta', 'name', get_board_name())
+
 def calculate_size(brd):
     # older kicad is brd.GetBoundingBox()
     bb = brd.GetBoardEdgesBoundingBox()
@@ -35,28 +38,54 @@ def calculate_size(brd):
     h = bb.GetHeight()
     return round(ToMM(w),1),round(ToMM(h),1)
 
+def export_step():
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # launch freecad to generate step file:
+#    os.system("freecad %s/kicad-StepUp-tools.FCMacro %s" % (script_dir, get_board_name()))
+    # now change the step assembly name,
+    os.system("sed -i 's/Pcb/%s/g' %s" % (get_nice_name(), get_board_name() + ".step"))
+    
+    # rename the file
+    date_stamp = datetime.datetime.today().strftime('%Y-%m-%d')
+    new_name = date_stamp + "-" + get_nice_name() + ".step"
+    os.system("mv %s %s" % (get_board_name() + ".step", new_name))
+
+    # and zip it with the date
+    zip_name = new_name + ".zip"
+    os.system("zip %s %s" % (zip_name, new_name))
+
+
+def get_git_version():
+    git_version = subprocess.check_output(['git', 'log', '--pretty=format:%h', '-n', '1']).decode('utf-8')
+
 def write_overview(brd):
     out_name = get_board_name()
-    git_version = subprocess.check_output(['git', 'log', '--pretty=format:"%h"', '-n', '1']).decode('utf-8')
 
     filename = args.output_dir + "/" + out_name + ".md"
     log = open(filename, 'w')
     log.write("\ ![logo](%s)\n\n" % config.get('logo', 'logo'))
 
-    log.write("# PCB layout for %s\n\n" % out_name)
+    log.write("# PCB layout for %s\n\n" % get_nice_name())
     log.write("\ ![overview](%s/%s-overview.png)\n\n" % (args.output_dir, out_name))
 
     log.write("# Configuration\n\n")
     log.write("* %.1f x %.1fmm\n" % calculate_size(brd))
     log.write("* %s mm FR4, %s silkscreen, %s mask\n" % (config.get('board', 'thickness'), config.get('board', 'silk_color'), config.get('board', 'mask_color')))
-    log.write("* generated on %s (%s)\n" % (datetime.datetime.today(), git_version))
+    log.write("* %s layers, %s copper\n" % (config.get('board', 'layers'), config.get('board', 'copper')))
+    if (config.get('board', 'layers') == '4'):
+        log.write(""" * layer stackup:
+    1. CuTop
+    2. CuLayer2
+    3. CuLayer3
+    4. CuBottom\n""")
+    log.write("* generated on %s, git version %s\n" % (datetime.datetime.today(), get_git_version()))
 
     log.close()
 
     print("generate pdf")
     os.system("pandoc %s -o %s" % (filename, args.output_dir + "/" + out_name + ".pdf"))
     os.remove("%s/%s-overview.png" % (args.output_dir, out_name)) # remove the png after making the pdf
-    os.remove(filename) # remove the markdown file
+    #os.remove(filename) # remove the markdown file
 
 # options taken mostly from https://github.com/blairbonnett-mirrors/kicad/blob/master/demos/python_scripts_examples/plot_board.py
 def plot(brd, args):
@@ -72,7 +101,15 @@ def plot(brd, args):
     popt.SetScale(1)
     popt.SetMirror(False)
     popt.SetUseGerberAttributes(True)
-    popt.SetExcludeEdgeLayer(True);
+    popt.SetExcludeEdgeLayer(True)
+    popt.SetUseGerberProtelExtensions(True) # instead of .gbr use protel extensions
+    if args.values:
+        popt.SetPlotReference(False)
+        popt.SetPlotValue(True)
+    else:
+        popt.SetPlotReference(True)
+        popt.SetPlotValue(False)
+
 #        popt.SetUseAuxOrigin(True)
     
     # This by gerbers only (also the name is truly horrid!) - what is this?
@@ -90,6 +127,11 @@ def plot(brd, args):
         ( "EdgeCuts",   pcbnew.Edge_Cuts,   "Edges",        False,  True,   True ),
         ( "User",       pcbnew.Cmts_User,   "User",         False,  True,   False ),
     ]
+
+    if config.get('board', 'layers') == '4':
+        plot_plan += [
+        ( "CuLayer2",   pcbnew.In1_Cu,      "Layer 2",      True,   True,  True ),
+        ( "CuLayer3",   pcbnew.In2_Cu,      "Layer 3",      True,   True,  True ) ]
 
     # https://github.com/KiCad/kicad-source-mirror/blob/0af5695e51733445c0f246eb688c98201601cd76/pcbnew/plot_board_layers.cpp#L226
     for layer_info in plot_plan:
@@ -136,6 +178,9 @@ if __name__ == '__main__':
     parser.add_argument('--output-dir', default='auto-fab', help="where to create files")
     parser.add_argument('--board', default=auto_board, help="board file")
     parser.add_argument('--config', default='config.rc', help="config")
+    parser.add_argument('--no-pdf', action='store_true', help="don't generate pdf")
+    parser.add_argument('--values', action='store_true', help="plot values instead of refs")
+    parser.add_argument('--export-step', action='store_true', help="use freecad stepup macro to export step")
     parser.add_argument('--dpi', default=300, help="resolution of overview image")
 
     args = parser.parse_args()
@@ -153,14 +198,17 @@ if __name__ == '__main__':
     brd = pcbnew.LoadBoard(args.board)
 
     # update git version
-    git_version = subprocess.check_output(['git', 'log', '--pretty=format:"%h"', '-n', '1']).decode('utf-8')
     for draw in brd.GetDrawings():
         if isinstance(draw, pcbnew.TEXTE_PCB):
             if draw.GetText().startswith("$ver$"): # .starts_with("$ver$"):
-                draw.SetText( "$ver$ %s %s" % (git_version, datetime.date.today() ))
+                draw.SetText( "%s %s" % (get_git_version(), datetime.date.today() ))
                 
     plot(brd, args)
-    write_overview(brd)
+    if not args.no_pdf:
+        write_overview(brd)
     zip_it()
+
+    if args.export_step:
+        export_step()
 
     print("done")
