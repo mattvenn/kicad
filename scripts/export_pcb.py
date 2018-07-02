@@ -57,6 +57,7 @@ def export_step():
 
 def get_git_version():
     git_version = subprocess.check_output(['git', 'log', '--pretty=format:%h', '-n', '1']).decode('utf-8')
+    return git_version
 
 def write_overview(brd):
     out_name = get_board_name()
