@@ -48,18 +48,23 @@ log_f = open(sys.argv[2] + ".log", 'w')
 # Output all of the component information
 for group in grouped:
     refs = ""
+    c = None
 
     # Add the reference of every component in the group and keep a reference
     # to the component so that the other data can be filled in once per group
     for component in group:
-        refs += component.getRef() + ", "
-        c = component
+        if "dnp" in component.getField("supplier"):
+            print("skipping DNP component: %s" % (component.getRef()))
+        else:
+            refs += component.getRef() + ", "
+            c = component
 
-    try:
-        farn_quant = int(c.getField("quant"))
-    except ValueError:
-        farn_quant = 1
-    # Fill in the component groups common data
-    out.writerow([refs, len(group) * farn_quant, c.getValue(), c.getPartName(), c.getFootprint(), c.getDescription(), c.getField("supplier"), c.getField("supplier PN"), c.getField("farnell #"), c.getField("MOQ"), c.getField("leadtime")])
+    if c is not None:
+        try:
+            farn_quant = int(c.getField("quant"))
+        except ValueError:
+            farn_quant = 1
+        # Fill in the component groups common data
+        out.writerow([refs, len(group) * farn_quant, c.getValue(), c.getPartName(), c.getFootprint(), c.getDescription(), c.getField("supplier"), c.getField("supplier PN"), c.getField("farnell #"), c.getField("MOQ"), c.getField("leadtime")])
 
 
