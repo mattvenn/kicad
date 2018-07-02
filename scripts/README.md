@@ -2,7 +2,8 @@
 
 * copy and adjust config.rc to the kicad project dir
 * run ./export_pcb.py - will auto detect kicad_pcb files
-* will auto create an auto-fab directory and zip it
+* will auto create an auto-fab directory and zip it with the date
+* if your board is in git version control and has a text $ver$ somewhere it will add the git hash and date
 
 ## problems? 
 
@@ -11,10 +12,6 @@
 * older version of kicad doesn't know about drill merge option
 * older version of kicad uses board.GetBoundingBox()
 * needs pandoc and latex for pdf output
-
-## todo
-
-update the git tag on the board if there is one.
 
 # processBom.py: Put farnell numbers in schematic
 
