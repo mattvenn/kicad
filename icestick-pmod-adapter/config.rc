@@ -1,0 +1,14 @@
+; pcb config
+[board]
+mask_color = green/any
+silk_color = white
+material = FR4
+thickness = 1.6
+layers = 2
+copper = 35um
+
+[logo]
+logo = /home/matt/work/finances/mattvenn_logo.png
+
+[meta]
+name = icestick double pmod adapter
