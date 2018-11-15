@@ -18,7 +18,7 @@ good resources:
 
 def zip_it():
     date_stamp = datetime.datetime.today().strftime('%Y-%m-%d')
-    zip_name = "fab-%s-%s.zip" % (get_board_name(), date_stamp) 
+    zip_name = "%s-%s-fab.zip" % (get_board_name(), date_stamp) 
     # delete it if already exists
     if os.path.exists(zip_name):
         os.remove(zip_name)
@@ -121,10 +121,12 @@ def plot(brd, args):
         # filename      layer               description     outline svg     gerb
         ( "MaskBottom", pcbnew.B_Mask,      "Mask bottom",  True,   False,  True ),
         ( "MaskTop",    pcbnew.F_Mask,      "Mask top",     True,   True,   True ),
-        ( "CuBottom",   pcbnew.B_Cu,        "Bottom layer", True,   True,  True ),
+        ( "CuBottom",   pcbnew.B_Cu,        "Bottom layer", True,   True,   True ),
         ( "CuTop",      pcbnew.F_Cu,        "Top layer",    True,   True,   True ),
         ( "SilkTop",    pcbnew.F_SilkS,     "Silk top",     False,  True,   True ),
         ( "SilkBottom", pcbnew.B_SilkS,     "Silk bottom",  False,  False,  True ),
+        ( "PasteTop",   pcbnew.F_Paste,     "Paste top",    False,  False,  True ),
+        ( "PasteBottom", pcbnew.B_Paste,    "Paste bottom", False,  False,  True ),
         ( "EdgeCuts",   pcbnew.Edge_Cuts,   "Edges",        False,  True,   True ),
         ( "User",       pcbnew.Cmts_User,   "User",         False,  True,   False ),
     ]
@@ -201,8 +203,15 @@ if __name__ == '__main__':
     # update git version
     for draw in brd.GetDrawings():
         if isinstance(draw, pcbnew.TEXTE_PCB):
-            if draw.GetText().startswith("$ver$"): # .starts_with("$ver$"):
+            if draw.GetText().startswith("$ver$"):
                 draw.SetText( "%s %s" % (get_git_version(), datetime.date.today() ))
+        if isinstance(draw, pcbnew.TEXTE_PCB):
+            if draw.GetText().startswith("$git$"):
+                draw.SetText( "%s" % (get_git_version()))
+
+        if isinstance(draw, pcbnew.TEXTE_PCB):
+            if draw.GetText().startswith("$date$"):
+                draw.SetText( "%s" % (datetime.date.today()))
                 
     plot(brd, args)
     if not args.no_pdf:
