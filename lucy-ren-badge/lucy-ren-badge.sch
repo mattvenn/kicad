@@ -116,8 +116,13 @@ U 1 1 5D5FED2C
 P 6050 2600
 F 0 "BT1" H 6168 2696 50  0000 L CNN
 F 1 "Battery_Cell" H 6168 2605 50  0000 L CNN
-F 2 "Battery_Holders:Keystone_3000_1x12mm-CoinCell" V 6050 2660 50  0001 C CNN
+F 2 "fp:Keystone_3000_1x12mm-CoinCell" V 6050 2660 50  0001 C CNN
 F 3 "" V 6050 2660 50  0001 C CNN
+F 4 "2056606" H 6050 2600 60  0001 C CNN "farnell #"
+F 5 "Value" H 6050 2600 60  0001 C CNN "supplier"
+F 6 "Value" H 6050 2600 60  0001 C CNN "supplier PN"
+F 7 "Value" H 6050 2600 60  0001 C CNN "MOQ"
+F 8 "Value" H 6050 2600 60  0001 C CNN "leadtime"
 	1    6050 2600
 	1    0    0    -1  
 $EndComp
@@ -132,28 +137,15 @@ F 3 "http://www.atmel.com/Images/doc8008.pdf" H 2800 3050 50  0001 C CNN
 	1    2800 3050
 	1    0    0    -1  
 $EndComp
-$Comp
-L SW_DIP_x01 SW1
-U 1 1 5D5FF062
-P 5750 2400
-F 0 "SW1" H 5750 2667 50  0000 C CNN
-F 1 "SW_DIP_x01" H 5750 2576 50  0000 C CNN
-F 2 "Buttons_Switches_SMD:SW_DIP_x1_W5.08mm_Slide_Copal_CHS-A" H 5750 2400 50  0001 C CNN
-F 3 "" H 5750 2400 50  0001 C CNN
-	1    5750 2400
-	1    0    0    -1  
-$EndComp
-Text Notes 5500 2350 0    60   ~ 0
+Text Notes 6250 2400 0    60   ~ 0
 3v\n
-Text Notes 5200 3300 0    60   ~ 0
-plus resistors for 3v
 $Comp
 L rgbled U2
 U 1 1 5D5FFEAB
 P 4600 4600
 F 0 "U2" H 4432 4739 60  0000 R CNN
 F 1 "rgbled" H 4432 4633 60  0000 R CNN
-F 2 "raise_fp:3528-4p" V 4600 4650 60  0001 C CNN
+F 2 "fp:3528-4p" V 4600 4650 60  0001 C CNN
 F 3 "" V 4600 4650 60  0001 C CNN
 	1    4600 4600
 	1    0    0    -1  
@@ -252,9 +244,13 @@ L C C2
 U 1 1 5D600471
 P 4900 2550
 F 0 "C2" H 5015 2596 50  0000 L CNN
-F 1 "C" H 5015 2505 50  0000 L CNN
+F 1 "1u" H 5015 2505 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4938 2400 50  0001 C CNN
 F 3 "" H 4900 2550 50  0001 C CNN
+F 4 "Value" H 4900 2550 60  0001 C CNN "supplier"
+F 5 "Value" H 4900 2550 60  0001 C CNN "supplier PN"
+F 6 "Value" H 4900 2550 60  0001 C CNN "MOQ"
+F 7 "Value" H 4900 2550 60  0001 C CNN "leadtime"
 	1    4900 2550
 	1    0    0    -1  
 $EndComp
@@ -275,7 +271,6 @@ Text Label 4400 2950 0    60   ~ 0
 r1
 Text Label 3750 3150 0    60   ~ 0
 b1
-NoConn ~ 3750 1650
 NoConn ~ 3750 1750
 NoConn ~ 3750 1850
 NoConn ~ 3750 1950
@@ -295,9 +290,14 @@ L R R1
 U 1 1 5D600903
 P 6250 1550
 F 0 "R1" H 6320 1596 50  0000 L CNN
-F 1 "R" H 6320 1505 50  0000 L CNN
+F 1 "10k" H 6320 1505 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 6180 1550 50  0001 C CNN
 F 3 "" H 6250 1550 50  0001 C CNN
+F 4 "1469856" H 6250 1550 60  0001 C CNN "farnell #"
+F 5 "Value" H 6250 1550 60  0001 C CNN "supplier"
+F 6 "Value" H 6250 1550 60  0001 C CNN "supplier PN"
+F 7 "Value" H 6250 1550 60  0001 C CNN "MOQ"
+F 8 "Value" H 6250 1550 60  0001 C CNN "leadtime"
 	1    6250 1550
 	-1   0    0    1   
 $EndComp
@@ -321,9 +321,14 @@ L C C1
 U 1 1 5D600B9F
 P 5700 1550
 F 0 "C1" H 5815 1596 50  0000 L CNN
-F 1 "C" H 5815 1505 50  0000 L CNN
+F 1 "0.1u" H 5815 1505 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5738 1400 50  0001 C CNN
 F 3 "" H 5700 1550 50  0001 C CNN
+F 4 "2773209" H 5700 1550 60  0001 C CNN "farnell #"
+F 5 "Value" H 5700 1550 60  0001 C CNN "supplier"
+F 6 "Value" H 5700 1550 60  0001 C CNN "supplier PN"
+F 7 "Value" H 5700 1550 60  0001 C CNN "MOQ"
+F 8 "Value" H 5700 1550 60  0001 C CNN "leadtime"
 	1    5700 1550
 	1    0    0    -1  
 $EndComp
@@ -345,9 +350,14 @@ L R R2
 U 1 1 5D600DAD
 P 4250 2950
 F 0 "R2" V 4457 2950 50  0000 C CNN
-F 1 "R" V 4366 2950 50  0000 C CNN
+F 1 "60R" V 4366 2950 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 4180 2950 50  0001 C CNN
 F 3 "" H 4250 2950 50  0001 C CNN
+F 4 "1653007" H 4250 2950 60  0001 C CNN "farnell #"
+F 5 "Value" H 4250 2950 60  0001 C CNN "supplier"
+F 6 "Value" H 4250 2950 60  0001 C CNN "supplier PN"
+F 7 "Value" H 4250 2950 60  0001 C CNN "MOQ"
+F 8 "Value" H 4250 2950 60  0001 C CNN "leadtime"
 	1    4250 2950
 	0    -1   -1   0   
 $EndComp
@@ -394,4 +404,43 @@ NoConn ~ 3750 3450
 NoConn ~ 3750 3800
 NoConn ~ 3750 3900
 NoConn ~ 3750 4000
+$Comp
+L SW_DIP_x02 SW1
+U 1 1 5D600814
+P 5750 2400
+F 0 "SW1" H 5750 2767 50  0000 C CNN
+F 1 "SW_DIP_x02" H 5750 2676 50  0000 C CNN
+F 2 "raise_fp:SW_DIP_SPSTx02_Slide_6.7x6.64mm_W6.73mm_P2.54mm_LowProfile_JPin" H 5750 2400 50  0001 C CNN
+F 3 "" H 5750 2400 50  0001 C CNN
+F 4 "2749881" H 5750 2400 60  0001 C CNN "farnell #"
+F 5 "Value" H 5750 2400 60  0001 C CNN "supplier"
+F 6 "Value" H 5750 2400 60  0001 C CNN "supplier PN"
+F 7 "Value" H 5750 2400 60  0001 C CNN "MOQ"
+F 8 "Value" H 5750 2400 60  0001 C CNN "leadtime"
+	1    5750 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5D600C53
+P 6050 2300
+F 0 "#PWR07" H 6050 2050 50  0001 C CNN
+F 1 "GND" H 6055 2127 50  0000 C CNN
+F 2 "" H 6050 2300 50  0001 C CNN
+F 3 "" H 6050 2300 50  0001 C CNN
+	1    6050 2300
+	0    -1   -1   0   
+$EndComp
+Text Label 5400 1950 0    60   ~ 0
+mode
+Wire Wire Line
+	5400 1950 5400 2300
+Wire Wire Line
+	5400 2300 5450 2300
+Text Label 3750 1650 0    60   ~ 0
+mode
+Text Notes 5900 2800 0    60   ~ 0
+battery is CR-1220
+Text Notes 4900 4200 0    60   ~ 0
+R = 1.8V. 20mA @ 3v = 60R
 $EndSCHEMATC

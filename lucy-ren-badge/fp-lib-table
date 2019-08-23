@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name fp)(type KiCad)(uri "$(KIPRJMOD)/fp.pretty")(options "")(descr ""))
+  (lib (name raise_fp)(type KiCad)(uri /home/matt/work/shortcut/raise-v3.1/raise_fp.pretty)(options "")(descr ""))
+)
