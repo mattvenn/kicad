@@ -1,6 +1,6 @@
 ; pcb config
 [board]
-mask_color = red
+mask_color = red. if not available with black silk then green
 silk_color = black
 material = FR4
 thickness = 1.6
