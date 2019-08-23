@@ -10,8 +10,9 @@ reduced size of master image by 4 to 1008x756
 
 BOM
 
+pins - TODO!
 slide switch - farnell
-battery - ordered
+battery - ordered amazon
 battery holder - farnell
 attiny - check footprint & parts I have - done is correct
 0.1u x 1  - farnell
