@@ -1,0 +1,32 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Conn_02x03_Row_Letter_First
+#
+DEF Conn_02x03_Row_Letter_First J 0 40 Y N 1 F N
+F0 "J" 50 200 50 H V C CNN
+F1 "Conn_02x03_Row_Letter_First" 50 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*2x??x*mm*
+ Connector*:*2x???Pitch*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 150 -150 1 1 10 f
+S 150 -95 100 -105 1 1 6 N
+S 150 5 100 -5 1 1 6 N
+S 150 105 100 95 1 1 6 N
+X Pin_a1 a1 -200 100 150 R 50 50 1 1 P
+X Pin_a2 a2 -200 0 150 R 50 50 1 1 P
+X Pin_a3 a3 -200 -100 150 R 50 50 1 1 P
+X Pin_b1 b1 300 100 150 L 50 50 1 1 P
+X Pin_b2 b2 300 0 150 L 50 50 1 1 P
+X Pin_b3 b3 300 -100 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

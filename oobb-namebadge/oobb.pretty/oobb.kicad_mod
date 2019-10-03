@@ -1,0 +1,15 @@
+(module oobb (layer F.Cu) (tedit 5D961E9B)
+  (fp_text reference REF** (at 0 0.5) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value oobb (at 0 -0.5) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_line (start 10 -1.5) (end 7 -1.5) (layer Edge.Cuts) (width 0.2))
+  (fp_line (start 7 -1.5) (end 7 1.5) (layer Edge.Cuts) (width 0.2))
+  (fp_line (start 7 1.5) (end 10 1.5) (layer Edge.Cuts) (width 0.2))
+  (fp_line (start 10 1.5) (end 13 1.5) (layer Edge.Cuts) (width 0.2))
+  (fp_line (start 13 1.5) (end 13 -1.5) (layer Edge.Cuts) (width 0.2))
+  (fp_line (start 13 -1.5) (end 10 -1.5) (layer Edge.Cuts) (width 0.2))
+  (pad "" np_thru_hole circle (at 0 0) (size 6 6) (drill 6) (layers *.Cu *.Mask))
+)
