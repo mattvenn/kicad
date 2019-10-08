@@ -1,4 +1,4 @@
-update=Thu 03 Oct 2019 18:20:33 CEST
+update=Tue 08 Oct 2019 11:47:35 CEST
 version=1
 last_client=kicad
 [general]
@@ -126,3 +126,4 @@ LibName92=Xicor
 LibName93=xilinx
 LibName94=zetex
 LibName95=Zilog
+LibName96=oobb-namebadge

@@ -94,6 +94,7 @@ LIBS:Xicor
 LIBS:xilinx
 LIBS:zetex
 LIBS:Zilog
+LIBS:oobb-namebadge
 LIBS:oobb-namebadge-cache
 EELAYER 26 0
 EELAYER END
@@ -109,28 +110,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L GND #PWR01
-U 1 1 5D963203
-P 2950 1950
-F 0 "#PWR01" H 2950 1700 50  0001 C CNN
-F 1 "GND" V 2955 1822 50  0000 R CNN
-F 2 "" H 2950 1950 50  0001 C CNN
-F 3 "" H 2950 1950 50  0001 C CNN
-	1    2950 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L +3.3V #PWR02
-U 1 1 5D963333
-P 2950 1450
-F 0 "#PWR02" H 2950 1300 50  0001 C CNN
-F 1 "+3.3V" V 2965 1578 50  0000 L CNN
-F 2 "" H 2950 1450 50  0001 C CNN
-F 3 "" H 2950 1450 50  0001 C CNN
-	1    2950 1450
-	1    0    0    -1  
-$EndComp
 $Comp
 L GND #PWR03
 U 1 1 5D9633FE
@@ -154,6 +133,133 @@ F 3 "" H 2150 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
+L Conn_01x01 J7
+U 1 1 5D963A71
+P 5950 2900
+F 0 "J7" H 6030 2942 50  0000 L CNN
+F 1 "Conn_01x01" H 6030 2851 50  0000 L CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 5950 2900 50  0001 C CNN
+F 3 "~" H 5950 2900 50  0001 C CNN
+	1    5950 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J8
+U 1 1 5D963ABB
+P 5950 3100
+F 0 "J8" H 6030 3142 50  0000 L CNN
+F 1 "Conn_01x01" H 6030 3051 50  0000 L CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 5950 3100 50  0001 C CNN
+F 3 "~" H 5950 3100 50  0001 C CNN
+	1    5950 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L lipo-charger-boost U2
+U 1 1 5D9C5C35
+P 5800 3800
+F 0 "U2" H 6028 3853 60  0000 L CNN
+F 1 "lipo-charger-boost" H 6028 3747 60  0000 L CNN
+F 2 "oobb:lipo-charger-boost" H 5800 3800 60  0001 C CNN
+F 3 "" H 5800 3800 60  0001 C CNN
+	1    5800 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR011
+U 1 1 5D9C5C9F
+P 5500 3550
+F 0 "#PWR011" H 5500 3300 50  0001 C CNN
+F 1 "GND" V 5505 3422 50  0000 R CNN
+F 2 "" H 5500 3550 50  0001 C CNN
+F 3 "" H 5500 3550 50  0001 C CNN
+	1    5500 3550
+	0    1    1    0   
+$EndComp
+NoConn ~ 5500 3650
+$Comp
+L AP1117-15 U1
+U 1 1 5D9C5DAD
+P 3600 3550
+F 0 "U1" H 3600 3792 50  0000 C CNN
+F 1 "AP1117-15" H 3600 3701 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 3600 3750 50  0001 C CNN
+F 3 "http://www.diodes.com/datasheets/AP1117.pdf" H 3700 3300 50  0001 C CNN
+F 4 "1202826" H 3600 3550 60  0001 C CNN "farnell #"
+F 5 "Value" H 3600 3550 60  0001 C CNN "supplier"
+F 6 "Value" H 3600 3550 60  0001 C CNN "supplier PN"
+F 7 "Value" H 3600 3550 60  0001 C CNN "MOQ"
+F 8 "Value" H 3600 3550 60  0001 C CNN "leadtime"
+	1    3600 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_SPDT SW1
+U 1 1 5D9C5F59
+P 5150 4600
+F 0 "SW1" H 5150 4885 50  0000 C CNN
+F 1 "SW_SPDT" H 5150 4794 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPDT_CK-JS102011SAQN" H 5150 4600 50  0001 C CNN
+F 3 "" H 5150 4600 50  0001 C CNN
+F 4 "2320017 " H 5150 4600 60  0001 C CNN "farnell #"
+F 5 "Value" H 5150 4600 60  0001 C CNN "supplier"
+F 6 "Value" H 5150 4600 60  0001 C CNN "supplier PN"
+F 7 "Value" H 5150 4600 60  0001 C CNN "MOQ"
+F 8 "Value" H 5150 4600 60  0001 C CNN "leadtime"
+	1    5150 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 5D9C6130
+P 5750 3100
+F 0 "#PWR012" H 5750 2850 50  0001 C CNN
+F 1 "GND" V 5755 2972 50  0000 R CNN
+F 2 "" H 5750 3100 50  0001 C CNN
+F 3 "" H 5750 3100 50  0001 C CNN
+	1    5750 3100
+	0    1    1    0   
+$EndComp
+Text Label 5750 2900 2    60   ~ 0
+lipo
+Text Label 5350 4500 0    60   ~ 0
+lipo
+$Comp
+L +3.3V #PWR015
+U 1 1 5D9C6392
+P 3900 3550
+F 0 "#PWR015" H 3900 3400 50  0001 C CNN
+F 1 "+3.3V" V 3915 3678 50  0000 L CNN
+F 2 "" H 3900 3550 50  0001 C CNN
+F 3 "" H 3900 3550 50  0001 C CNN
+	1    3900 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 5D9C63BE
+P 3600 3850
+F 0 "#PWR016" H 3600 3600 50  0001 C CNN
+F 1 "GND" V 3605 3722 50  0000 R CNN
+F 2 "" H 3600 3850 50  0001 C CNN
+F 3 "" H 3600 3850 50  0001 C CNN
+	1    3600 3850
+	1    0    0    -1  
+$EndComp
+Text Label 5500 3750 2    60   ~ 0
+boost-out
+Text Label 3300 3550 2    60   ~ 0
+boost-out
+Wire Wire Line
+	4950 4600 4950 4000
+Wire Wire Line
+	4950 4000 5500 4000
+NoConn ~ 5350 4700
+Text Label 2250 1450 1    60   ~ 0
+sda
+Text Label 2250 1950 3    60   ~ 0
+scl
+$Comp
 L Conn_02x03_Odd_Even J1
 U 1 1 5D963559
 P 2250 1750
@@ -164,178 +270,212 @@ F 3 "~" H 2250 1750 50  0001 C CNN
 	1    2250 1750
 	0    -1   -1   0   
 $EndComp
+Text Label 2350 1450 1    60   ~ 0
+gpio1
+Text Label 2350 1950 3    60   ~ 0
+gpio2
+$Comp
+L GND #PWR01
+U 1 1 5D9C6BAD
+P 2900 1950
+F 0 "#PWR01" H 2900 1700 50  0001 C CNN
+F 1 "GND" V 2905 1822 50  0000 R CNN
+F 2 "" H 2900 1950 50  0001 C CNN
+F 3 "" H 2900 1950 50  0001 C CNN
+	1    2900 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR02
+U 1 1 5D9C6BB3
+P 2900 1450
+F 0 "#PWR02" H 2900 1300 50  0001 C CNN
+F 1 "+3.3V" V 2915 1578 50  0000 L CNN
+F 2 "" H 2900 1450 50  0001 C CNN
+F 3 "" H 2900 1450 50  0001 C CNN
+	1    2900 1450
+	1    0    0    -1  
+$EndComp
+Text Label 3000 1450 1    60   ~ 0
+sda
+Text Label 3000 1950 3    60   ~ 0
+scl
 $Comp
 L Conn_02x03_Odd_Even J2
-U 1 1 5D9635F0
-P 3050 1750
-F 0 "J2" V 3146 1562 50  0000 R CNN
+U 1 1 5D9C6BBB
+P 3000 1750
+F 0 "J2" V 3096 1562 50  0000 R CNN
 F 1 "Conn_02x03_Odd_Even" H 3450 2100 50  0000 R CNN
-F 2 "oobb:Pin_Header_Straight_2x03_Pitch2.54mm" H 3050 1750 50  0001 C CNN
-F 3 "~" H 3050 1750 50  0001 C CNN
-	1    3050 1750
+F 2 "oobb:Pin_Header_Straight_2x03_Pitch2.54mm" H 3000 1750 50  0001 C CNN
+F 3 "~" H 3000 1750 50  0001 C CNN
+	1    3000 1750
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 2250 1450
-NoConn ~ 2350 1450
-NoConn ~ 2250 1950
-NoConn ~ 2350 1950
-NoConn ~ 3050 1450
-NoConn ~ 3150 1450
-NoConn ~ 3050 1950
-NoConn ~ 3150 1950
+Text Label 3100 1450 1    60   ~ 0
+gpio1
+Text Label 3100 1950 3    60   ~ 0
+gpio2
 $Comp
 L GND #PWR05
-U 1 1 5D963760
-P 4550 1950
-F 0 "#PWR05" H 4550 1700 50  0001 C CNN
-F 1 "GND" V 4555 1822 50  0000 R CNN
-F 2 "" H 4550 1950 50  0001 C CNN
-F 3 "" H 4550 1950 50  0001 C CNN
-	1    4550 1950
+U 1 1 5D9C6C24
+P 3500 1950
+F 0 "#PWR05" H 3500 1700 50  0001 C CNN
+F 1 "GND" V 3505 1822 50  0000 R CNN
+F 2 "" H 3500 1950 50  0001 C CNN
+F 3 "" H 3500 1950 50  0001 C CNN
+	1    3500 1950
 	1    0    0    -1  
 $EndComp
 $Comp
 L +3.3V #PWR06
-U 1 1 5D963766
-P 4550 1450
-F 0 "#PWR06" H 4550 1300 50  0001 C CNN
-F 1 "+3.3V" V 4565 1578 50  0000 L CNN
-F 2 "" H 4550 1450 50  0001 C CNN
-F 3 "" H 4550 1450 50  0001 C CNN
-	1    4550 1450
+U 1 1 5D9C6C2A
+P 3500 1450
+F 0 "#PWR06" H 3500 1300 50  0001 C CNN
+F 1 "+3.3V" V 3515 1578 50  0000 L CNN
+F 2 "" H 3500 1450 50  0001 C CNN
+F 3 "" H 3500 1450 50  0001 C CNN
+	1    3500 1450
 	1    0    0    -1  
 $EndComp
+Text Label 3600 1450 1    60   ~ 0
+sda
+Text Label 3600 1950 3    60   ~ 0
+scl
+$Comp
+L Conn_02x03_Odd_Even J3
+U 1 1 5D9C6C32
+P 3600 1750
+F 0 "J3" V 3696 1562 50  0000 R CNN
+F 1 "Conn_02x03_Odd_Even" H 4050 2100 50  0000 R CNN
+F 2 "oobb:Pin_Header_Straight_2x03_Pitch2.54mm" H 3600 1750 50  0001 C CNN
+F 3 "~" H 3600 1750 50  0001 C CNN
+	1    3600 1750
+	0    -1   -1   0   
+$EndComp
+Text Label 3700 1450 1    60   ~ 0
+gpio1
+Text Label 3700 1950 3    60   ~ 0
+gpio2
 $Comp
 L GND #PWR07
-U 1 1 5D96376C
-P 3750 1950
-F 0 "#PWR07" H 3750 1700 50  0001 C CNN
-F 1 "GND" V 3755 1822 50  0000 R CNN
-F 2 "" H 3750 1950 50  0001 C CNN
-F 3 "" H 3750 1950 50  0001 C CNN
-	1    3750 1950
+U 1 1 5D9C6C3A
+P 4250 1950
+F 0 "#PWR07" H 4250 1700 50  0001 C CNN
+F 1 "GND" V 4255 1822 50  0000 R CNN
+F 2 "" H 4250 1950 50  0001 C CNN
+F 3 "" H 4250 1950 50  0001 C CNN
+	1    4250 1950
 	1    0    0    -1  
 $EndComp
 $Comp
 L +3.3V #PWR08
-U 1 1 5D963772
-P 3750 1450
-F 0 "#PWR08" H 3750 1300 50  0001 C CNN
-F 1 "+3.3V" V 3765 1578 50  0000 L CNN
-F 2 "" H 3750 1450 50  0001 C CNN
-F 3 "" H 3750 1450 50  0001 C CNN
-	1    3750 1450
+U 1 1 5D9C6C40
+P 4250 1450
+F 0 "#PWR08" H 4250 1300 50  0001 C CNN
+F 1 "+3.3V" V 4265 1578 50  0000 L CNN
+F 2 "" H 4250 1450 50  0001 C CNN
+F 3 "" H 4250 1450 50  0001 C CNN
+	1    4250 1450
 	1    0    0    -1  
 $EndComp
-$Comp
-L Conn_02x03_Odd_Even J3
-U 1 1 5D963778
-P 3850 1750
-F 0 "J3" V 3946 1562 50  0000 R CNN
-F 1 "Conn_02x03_Odd_Even" H 4300 2100 50  0000 R CNN
-F 2 "oobb:Pin_Header_Straight_2x03_Pitch2.54mm" H 3850 1750 50  0001 C CNN
-F 3 "~" H 3850 1750 50  0001 C CNN
-	1    3850 1750
-	0    -1   -1   0   
-$EndComp
+Text Label 4350 1450 1    60   ~ 0
+sda
+Text Label 4350 1950 3    60   ~ 0
+scl
 $Comp
 L Conn_02x03_Odd_Even J4
-U 1 1 5D96377E
-P 4650 1750
-F 0 "J4" V 4746 1562 50  0000 R CNN
-F 1 "Conn_02x03_Odd_Even" H 5050 2100 50  0000 R CNN
-F 2 "oobb:Pin_Header_Straight_2x03_Pitch2.54mm" H 4650 1750 50  0001 C CNN
-F 3 "~" H 4650 1750 50  0001 C CNN
-	1    4650 1750
+U 1 1 5D9C6C48
+P 4350 1750
+F 0 "J4" V 4446 1562 50  0000 R CNN
+F 1 "Conn_02x03_Odd_Even" H 4800 2100 50  0000 R CNN
+F 2 "oobb:Pin_Header_Straight_2x03_Pitch2.54mm" H 4350 1750 50  0001 C CNN
+F 3 "~" H 4350 1750 50  0001 C CNN
+	1    4350 1750
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 3850 1450
-NoConn ~ 3950 1450
-NoConn ~ 3850 1950
-NoConn ~ 3950 1950
-NoConn ~ 4650 1450
-NoConn ~ 4750 1450
-NoConn ~ 4650 1950
-NoConn ~ 4750 1950
+Text Label 4450 1450 1    60   ~ 0
+gpio1
+Text Label 4450 1950 3    60   ~ 0
+gpio2
 $Comp
 L GND #PWR09
-U 1 1 5D9637E4
-P 6150 1950
-F 0 "#PWR09" H 6150 1700 50  0001 C CNN
-F 1 "GND" V 6155 1822 50  0000 R CNN
-F 2 "" H 6150 1950 50  0001 C CNN
-F 3 "" H 6150 1950 50  0001 C CNN
-	1    6150 1950
+U 1 1 5D9C6C8B
+P 4900 1950
+F 0 "#PWR09" H 4900 1700 50  0001 C CNN
+F 1 "GND" V 4905 1822 50  0000 R CNN
+F 2 "" H 4900 1950 50  0001 C CNN
+F 3 "" H 4900 1950 50  0001 C CNN
+	1    4900 1950
 	1    0    0    -1  
 $EndComp
 $Comp
 L +3.3V #PWR010
-U 1 1 5D9637EA
-P 6150 1450
-F 0 "#PWR010" H 6150 1300 50  0001 C CNN
-F 1 "+3.3V" V 6165 1578 50  0000 L CNN
-F 2 "" H 6150 1450 50  0001 C CNN
-F 3 "" H 6150 1450 50  0001 C CNN
-	1    6150 1450
+U 1 1 5D9C6C91
+P 4900 1450
+F 0 "#PWR010" H 4900 1300 50  0001 C CNN
+F 1 "+3.3V" V 4915 1578 50  0000 L CNN
+F 2 "" H 4900 1450 50  0001 C CNN
+F 3 "" H 4900 1450 50  0001 C CNN
+	1    4900 1450
 	1    0    0    -1  
 $EndComp
+Text Label 5000 1450 1    60   ~ 0
+sda
+Text Label 5000 1950 3    60   ~ 0
+scl
 $Comp
 L Conn_02x03_Odd_Even J6
-U 1 1 5D963802
-P 6250 1750
-F 0 "J6" V 6346 1562 50  0000 R CNN
-F 1 "Conn_02x03_Odd_Even" H 6650 2100 50  0000 R CNN
-F 2 "oobb:Pin_Header_Straight_2x03_Pitch2.54mm" H 6250 1750 50  0001 C CNN
-F 3 "~" H 6250 1750 50  0001 C CNN
-	1    6250 1750
+U 1 1 5D9C6C99
+P 5000 1750
+F 0 "J6" V 5096 1562 50  0000 R CNN
+F 1 "Conn_02x03_Odd_Even" H 5450 2100 50  0000 R CNN
+F 2 "oobb:Pin_Header_Straight_2x03_Pitch2.54mm" H 5000 1750 50  0001 C CNN
+F 3 "~" H 5000 1750 50  0001 C CNN
+F 4 "Value" H 5000 1750 60  0001 C CNN "supplier"
+F 5 "Value" H 5000 1750 60  0001 C CNN "supplier PN"
+F 6 "Value" H 5000 1750 60  0001 C CNN "MOQ"
+F 7 "Value" H 5000 1750 60  0001 C CNN "leadtime"
+	1    5000 1750
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 6250 1450
-NoConn ~ 6350 1450
-NoConn ~ 6250 1950
-NoConn ~ 6350 1950
-$Comp
-L Conn_01x01 J7
-U 1 1 5D963A71
-P 2850 2550
-F 0 "J7" H 2930 2592 50  0000 L CNN
-F 1 "Conn_01x01" H 2930 2501 50  0000 L CNN
-F 2 "Connectors_TestPoints:Test_Point_Pad_d1.5mm" H 2850 2550 50  0001 C CNN
-F 3 "~" H 2850 2550 50  0001 C CNN
-	1    2850 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x01 J8
-U 1 1 5D963ABB
-P 2850 2750
-F 0 "J8" H 2930 2792 50  0000 L CNN
-F 1 "Conn_01x01" H 2930 2701 50  0000 L CNN
-F 2 "Connectors_TestPoints:Test_Point_Pad_d1.5mm" H 2850 2750 50  0001 C CNN
-F 3 "~" H 2850 2750 50  0001 C CNN
-	1    2850 2750
-	1    0    0    -1  
-$EndComp
+Text Label 5100 1450 1    60   ~ 0
+gpio1
+Text Label 5100 1950 3    60   ~ 0
+gpio2
+Text Label 7250 2050 2    60   ~ 0
+gpio1
+Text Label 7250 2150 2    60   ~ 0
+gpio2
+Text Label 7250 2350 2    60   ~ 0
+boost-out
 $Comp
 L GND #PWR013
-U 1 1 5D963AE3
-P 2650 2750
-F 0 "#PWR013" H 2650 2500 50  0001 C CNN
-F 1 "GND" V 2655 2622 50  0000 R CNN
-F 2 "" H 2650 2750 50  0001 C CNN
-F 3 "" H 2650 2750 50  0001 C CNN
-	1    2650 2750
-	1    0    0    -1  
+U 1 1 5D9C7066
+P 7250 2250
+F 0 "#PWR013" H 7250 2000 50  0001 C CNN
+F 1 "GND" V 7255 2122 50  0000 R CNN
+F 2 "" H 7250 2250 50  0001 C CNN
+F 3 "" H 7250 2250 50  0001 C CNN
+	1    7250 2250
+	0    1    1    0   
 $EndComp
 $Comp
-L +3.3V #PWR014
-U 1 1 5D963AFE
-P 2650 2550
-F 0 "#PWR014" H 2650 2400 50  0001 C CNN
-F 1 "+3.3V" V 2665 2678 50  0000 L CNN
-F 2 "" H 2650 2550 50  0001 C CNN
-F 3 "" H 2650 2550 50  0001 C CNN
-	1    2650 2550
+L Conn_01x06 J5
+U 1 1 5D9C72D7
+P 7450 2250
+F 0 "J5" H 7530 2242 50  0000 L CNN
+F 1 "Conn_01x06" H 7530 2151 50  0000 L CNN
+F 2 "oobb:icebreaker" H 7450 2250 50  0001 C CNN
+F 3 "~" H 7450 2250 50  0001 C CNN
+	1    7450 2250
 	1    0    0    -1  
 $EndComp
+NoConn ~ 7250 2450
+NoConn ~ 7250 2550
+Text Notes 6100 3600 0    60   ~ 0
+charger PCB has USB micro socket for charging\nso charge pad is not connected
+Text Notes 6100 5200 0    60   ~ 0
+fix icebreaker pin positions\ncheck icebreaker rgb driver can use as gpio\ncheck boost pad positions\n
+Text Notes 7650 2550 0    60   ~ 0
+leave 1 pair of icebreaker psu sockets unconnected as interferes with charger pcb
 $EndSCHEMATC
