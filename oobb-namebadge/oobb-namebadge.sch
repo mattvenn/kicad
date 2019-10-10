@@ -135,48 +135,48 @@ $EndComp
 $Comp
 L Conn_01x01 J7
 U 1 1 5D963A71
-P 5950 2900
-F 0 "J7" H 6030 2942 50  0000 L CNN
-F 1 "Conn_01x01" H 6030 2851 50  0000 L CNN
-F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 5950 2900 50  0001 C CNN
-F 3 "~" H 5950 2900 50  0001 C CNN
-	1    5950 2900
+P 2100 3600
+F 0 "J7" H 2180 3642 50  0000 L CNN
+F 1 "Conn_01x01" H 2180 3551 50  0000 L CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 2100 3600 50  0001 C CNN
+F 3 "~" H 2100 3600 50  0001 C CNN
+	1    2100 3600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Conn_01x01 J8
 U 1 1 5D963ABB
-P 5950 3100
-F 0 "J8" H 6030 3142 50  0000 L CNN
-F 1 "Conn_01x01" H 6030 3051 50  0000 L CNN
-F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 5950 3100 50  0001 C CNN
-F 3 "~" H 5950 3100 50  0001 C CNN
-	1    5950 3100
+P 2100 3800
+F 0 "J8" H 2180 3842 50  0000 L CNN
+F 1 "Conn_01x01" H 2180 3751 50  0000 L CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 2100 3800 50  0001 C CNN
+F 3 "~" H 2100 3800 50  0001 C CNN
+	1    2100 3800
 	1    0    0    -1  
 $EndComp
 $Comp
 L lipo-charger-boost U2
 U 1 1 5D9C5C35
-P 5800 3800
-F 0 "U2" H 6028 3853 60  0000 L CNN
-F 1 "lipo-charger-boost" H 6028 3747 60  0000 L CNN
-F 2 "oobb:lipo-charger-boost" H 5800 3800 60  0001 C CNN
-F 3 "" H 5800 3800 60  0001 C CNN
-	1    5800 3800
+P 5300 3750
+F 0 "U2" H 5528 3803 60  0000 L CNN
+F 1 "lipo-charger-boost" H 5528 3697 60  0000 L CNN
+F 2 "oobb:lipo-charger-boost" H 5300 3750 60  0001 C CNN
+F 3 "" H 5300 3750 60  0001 C CNN
+	1    5300 3750
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR011
 U 1 1 5D9C5C9F
-P 5500 3550
-F 0 "#PWR011" H 5500 3300 50  0001 C CNN
-F 1 "GND" V 5505 3422 50  0000 R CNN
-F 2 "" H 5500 3550 50  0001 C CNN
-F 3 "" H 5500 3550 50  0001 C CNN
-	1    5500 3550
+P 5000 3500
+F 0 "#PWR011" H 5000 3250 50  0001 C CNN
+F 1 "GND" V 5005 3372 50  0000 R CNN
+F 2 "" H 5000 3500 50  0001 C CNN
+F 3 "" H 5000 3500 50  0001 C CNN
+	1    5000 3500
 	0    1    1    0   
 $EndComp
-NoConn ~ 5500 3650
+NoConn ~ 5000 3600
 $Comp
 L AP1117-15 U1
 U 1 1 5D9C5DAD
@@ -196,33 +196,33 @@ $EndComp
 $Comp
 L SW_SPDT SW1
 U 1 1 5D9C5F59
-P 5150 4600
-F 0 "SW1" H 5150 4885 50  0000 C CNN
-F 1 "SW_SPDT" H 5150 4794 50  0000 C CNN
-F 2 "Buttons_Switches_SMD:SW_SPDT_CK-JS102011SAQN" H 5150 4600 50  0001 C CNN
-F 3 "" H 5150 4600 50  0001 C CNN
-F 4 "2320017 " H 5150 4600 60  0001 C CNN "farnell #"
-F 5 "Value" H 5150 4600 60  0001 C CNN "supplier"
-F 6 "Value" H 5150 4600 60  0001 C CNN "supplier PN"
-F 7 "Value" H 5150 4600 60  0001 C CNN "MOQ"
-F 8 "Value" H 5150 4600 60  0001 C CNN "leadtime"
-	1    5150 4600
+P 4650 4550
+F 0 "SW1" H 4650 4835 50  0000 C CNN
+F 1 "SW_SPDT" H 4650 4744 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPDT_CK-JS102011SAQN" H 4650 4550 50  0001 C CNN
+F 3 "" H 4650 4550 50  0001 C CNN
+F 4 "2320017 " H 4650 4550 60  0001 C CNN "farnell #"
+F 5 "Value" H 4650 4550 60  0001 C CNN "supplier"
+F 6 "Value" H 4650 4550 60  0001 C CNN "supplier PN"
+F 7 "Value" H 4650 4550 60  0001 C CNN "MOQ"
+F 8 "Value" H 4650 4550 60  0001 C CNN "leadtime"
+	1    4650 4550
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR012
 U 1 1 5D9C6130
-P 5750 3100
-F 0 "#PWR012" H 5750 2850 50  0001 C CNN
-F 1 "GND" V 5755 2972 50  0000 R CNN
-F 2 "" H 5750 3100 50  0001 C CNN
-F 3 "" H 5750 3100 50  0001 C CNN
-	1    5750 3100
+P 1900 3800
+F 0 "#PWR012" H 1900 3550 50  0001 C CNN
+F 1 "GND" V 1905 3672 50  0000 R CNN
+F 2 "" H 1900 3800 50  0001 C CNN
+F 3 "" H 1900 3800 50  0001 C CNN
+	1    1900 3800
 	0    1    1    0   
 $EndComp
-Text Label 5750 2900 2    60   ~ 0
+Text Label 1900 3600 2    60   ~ 0
 lipo
-Text Label 5350 4500 0    60   ~ 0
+Text Label 4850 4450 0    60   ~ 0
 lipo
 $Comp
 L +3.3V #PWR015
@@ -246,15 +246,15 @@ F 3 "" H 3600 3850 50  0001 C CNN
 	1    3600 3850
 	1    0    0    -1  
 $EndComp
-Text Label 5500 3750 2    60   ~ 0
+Text Label 5000 3700 2    60   ~ 0
 boost-out
 Text Label 3300 3550 2    60   ~ 0
 boost-out
 Wire Wire Line
-	4950 4600 4950 4000
+	4450 4550 4450 3950
 Wire Wire Line
-	4950 4000 5500 4000
-NoConn ~ 5350 4700
+	4450 3950 5000 3950
+NoConn ~ 4850 4650
 Text Label 2250 1450 1    60   ~ 0
 sda
 Text Label 2250 1950 3    60   ~ 0
@@ -442,98 +442,128 @@ Text Label 5100 1450 1    60   ~ 0
 gpio1
 Text Label 5100 1950 3    60   ~ 0
 gpio2
-Text Label 7250 2050 2    60   ~ 0
+Text Label 2150 5450 2    60   ~ 0
 gpio1
-Text Label 7250 2150 2    60   ~ 0
+Text Label 2150 5550 2    60   ~ 0
 gpio2
-Text Label 7250 2350 2    60   ~ 0
+Text Label 2150 5750 2    60   ~ 0
 boost-out
 $Comp
 L GND #PWR013
 U 1 1 5D9C7066
-P 7250 2250
-F 0 "#PWR013" H 7250 2000 50  0001 C CNN
-F 1 "GND" V 7255 2122 50  0000 R CNN
-F 2 "" H 7250 2250 50  0001 C CNN
-F 3 "" H 7250 2250 50  0001 C CNN
-	1    7250 2250
+P 2150 5650
+F 0 "#PWR013" H 2150 5400 50  0001 C CNN
+F 1 "GND" V 2155 5522 50  0000 R CNN
+F 2 "" H 2150 5650 50  0001 C CNN
+F 3 "" H 2150 5650 50  0001 C CNN
+	1    2150 5650
 	0    1    1    0   
 $EndComp
 $Comp
 L Conn_01x06 J5
 U 1 1 5D9C72D7
-P 7450 2250
-F 0 "J5" H 7530 2242 50  0000 L CNN
-F 1 "Conn_01x06" H 7530 2151 50  0000 L CNN
-F 2 "oobb:icebreaker" H 7450 2250 50  0001 C CNN
-F 3 "~" H 7450 2250 50  0001 C CNN
-	1    7450 2250
+P 2350 5650
+F 0 "J5" H 2430 5642 50  0000 L CNN
+F 1 "Conn_01x06" H 2430 5551 50  0000 L CNN
+F 2 "oobb:icebreaker" H 2350 5650 50  0001 C CNN
+F 3 "~" H 2350 5650 50  0001 C CNN
+	1    2350 5650
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7250 2450
-NoConn ~ 7250 2550
-Text Notes 6100 3600 0    60   ~ 0
+NoConn ~ 2150 5850
+NoConn ~ 2150 5950
+Text Notes 5600 3550 0    60   ~ 0
 charger PCB has USB micro socket for charging\nso charge pad is not connected
-Text Notes 6100 5200 0    60   ~ 0
+Text Notes 5600 5200 0    60   ~ 0
 \n
-Text Notes 7650 2550 0    60   ~ 0
+Text Notes 2550 5950 0    60   ~ 0
 leave 1 pair of icebreaker psu sockets unconnected as interferes with charger pcb
 $Comp
 L R R1
 U 1 1 5D9F3122
-P 6600 1450
-F 0 "R1" H 6670 1496 50  0000 L CNN
-F 1 "10k" H 6670 1405 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6530 1450 50  0001 C CNN
-F 3 "" H 6600 1450 50  0001 C CNN
-F 4 "Value" H 6600 1450 60  0001 C CNN "supplier"
-F 5 "Value" H 6600 1450 60  0001 C CNN "supplier PN"
-F 6 "Value" H 6600 1450 60  0001 C CNN "MOQ"
-F 7 "Value" H 6600 1450 60  0001 C CNN "leadtime"
-	1    6600 1450
+P 2100 6900
+F 0 "R1" H 2170 6946 50  0000 L CNN
+F 1 "10k" H 2170 6855 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2030 6900 50  0001 C CNN
+F 3 "" H 2100 6900 50  0001 C CNN
+F 4 "Value" H 2100 6900 60  0001 C CNN "supplier"
+F 5 "Value" H 2100 6900 60  0001 C CNN "supplier PN"
+F 6 "Value" H 2100 6900 60  0001 C CNN "MOQ"
+F 7 "Value" H 2100 6900 60  0001 C CNN "leadtime"
+	1    2100 6900
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R2
 U 1 1 5D9F317E
-P 6800 1450
-F 0 "R2" H 6870 1496 50  0000 L CNN
-F 1 "10k" H 6870 1405 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6730 1450 50  0001 C CNN
-F 3 "" H 6800 1450 50  0001 C CNN
-F 4 "Value" H 6800 1450 60  0001 C CNN "supplier"
-F 5 "Value" H 6800 1450 60  0001 C CNN "supplier PN"
-F 6 "Value" H 6800 1450 60  0001 C CNN "MOQ"
-F 7 "Value" H 6800 1450 60  0001 C CNN "leadtime"
-	1    6800 1450
+P 2300 6900
+F 0 "R2" H 2370 6946 50  0000 L CNN
+F 1 "10k" H 2370 6855 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2230 6900 50  0001 C CNN
+F 3 "" H 2300 6900 50  0001 C CNN
+F 4 "Value" H 2300 6900 60  0001 C CNN "supplier"
+F 5 "Value" H 2300 6900 60  0001 C CNN "supplier PN"
+F 6 "Value" H 2300 6900 60  0001 C CNN "MOQ"
+F 7 "Value" H 2300 6900 60  0001 C CNN "leadtime"
+	1    2300 6900
 	1    0    0    -1  
 $EndComp
-Text Label 6600 1300 1    60   ~ 0
+Text Label 2100 6750 1    60   ~ 0
 gpio1
-Text Label 6800 1300 1    60   ~ 0
+Text Label 2300 6750 1    60   ~ 0
 gpio2
 $Comp
 L +3.3V #PWR014
 U 1 1 5D9F3332
-P 6600 1600
-F 0 "#PWR014" H 6600 1450 50  0001 C CNN
-F 1 "+3.3V" V 6615 1728 50  0000 L CNN
-F 2 "" H 6600 1600 50  0001 C CNN
-F 3 "" H 6600 1600 50  0001 C CNN
-	1    6600 1600
+P 2100 7050
+F 0 "#PWR014" H 2100 6900 50  0001 C CNN
+F 1 "+3.3V" V 2115 7178 50  0000 L CNN
+F 2 "" H 2100 7050 50  0001 C CNN
+F 3 "" H 2100 7050 50  0001 C CNN
+	1    2100 7050
 	-1   0    0    1   
 $EndComp
 $Comp
 L +3.3V #PWR017
 U 1 1 5D9F3398
-P 6800 1600
-F 0 "#PWR017" H 6800 1450 50  0001 C CNN
-F 1 "+3.3V" V 6815 1728 50  0000 L CNN
-F 2 "" H 6800 1600 50  0001 C CNN
-F 3 "" H 6800 1600 50  0001 C CNN
-	1    6800 1600
+P 2300 7050
+F 0 "#PWR017" H 2300 6900 50  0001 C CNN
+F 1 "+3.3V" V 2315 7178 50  0000 L CNN
+F 2 "" H 2300 7050 50  0001 C CNN
+F 3 "" H 2300 7050 50  0001 C CNN
+	1    2300 7050
 	-1   0    0    1   
 $EndComp
-Text Notes 6350 950  0    60   ~ 0
+Text Notes 1850 6400 0    60   ~ 0
 pullups for LED driver output of icebreaker to control GPIOs for SAOs\n
+Wire Notes Line
+	1450 900  5600 900 
+Wire Notes Line
+	5600 900  5600 2450
+Wire Notes Line
+	5600 2450 1450 2450
+Wire Notes Line
+	1450 2450 1450 900 
+Wire Notes Line
+	1400 2750 8400 2750
+Wire Notes Line
+	8400 2750 8400 4900
+Wire Notes Line
+	8400 4850 1400 4850
+Wire Notes Line
+	1400 4850 1400 2700
+Wire Notes Line
+	1400 5150 6500 5150
+Wire Notes Line
+	6500 5150 6500 7550
+Wire Notes Line
+	6500 7550 1400 7550
+Wire Notes Line
+	1400 7550 1400 5150
+Text Notes 1500 850  0    118  ~ 0
+SAO x 5
+Text Notes 1500 2700 0    118  ~ 0
+LiPo charger + 3.3v regulator\n
+Text Notes 1450 5100 0    118  ~ 0
+iCEBreaker GPIO breakouts and pullups
 $EndSCHEMATC
