@@ -475,7 +475,65 @@ NoConn ~ 7250 2550
 Text Notes 6100 3600 0    60   ~ 0
 charger PCB has USB micro socket for charging\nso charge pad is not connected
 Text Notes 6100 5200 0    60   ~ 0
-fix icebreaker pin positions\ncheck icebreaker rgb driver can use as gpio\ncheck boost pad positions\n
+\n
 Text Notes 7650 2550 0    60   ~ 0
 leave 1 pair of icebreaker psu sockets unconnected as interferes with charger pcb
+$Comp
+L R R1
+U 1 1 5D9F3122
+P 6600 1450
+F 0 "R1" H 6670 1496 50  0000 L CNN
+F 1 "10k" H 6670 1405 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6530 1450 50  0001 C CNN
+F 3 "" H 6600 1450 50  0001 C CNN
+F 4 "Value" H 6600 1450 60  0001 C CNN "supplier"
+F 5 "Value" H 6600 1450 60  0001 C CNN "supplier PN"
+F 6 "Value" H 6600 1450 60  0001 C CNN "MOQ"
+F 7 "Value" H 6600 1450 60  0001 C CNN "leadtime"
+	1    6600 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5D9F317E
+P 6800 1450
+F 0 "R2" H 6870 1496 50  0000 L CNN
+F 1 "10k" H 6870 1405 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6730 1450 50  0001 C CNN
+F 3 "" H 6800 1450 50  0001 C CNN
+F 4 "Value" H 6800 1450 60  0001 C CNN "supplier"
+F 5 "Value" H 6800 1450 60  0001 C CNN "supplier PN"
+F 6 "Value" H 6800 1450 60  0001 C CNN "MOQ"
+F 7 "Value" H 6800 1450 60  0001 C CNN "leadtime"
+	1    6800 1450
+	1    0    0    -1  
+$EndComp
+Text Label 6600 1300 1    60   ~ 0
+gpio1
+Text Label 6800 1300 1    60   ~ 0
+gpio2
+$Comp
+L +3.3V #PWR014
+U 1 1 5D9F3332
+P 6600 1600
+F 0 "#PWR014" H 6600 1450 50  0001 C CNN
+F 1 "+3.3V" V 6615 1728 50  0000 L CNN
+F 2 "" H 6600 1600 50  0001 C CNN
+F 3 "" H 6600 1600 50  0001 C CNN
+	1    6600 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3.3V #PWR017
+U 1 1 5D9F3398
+P 6800 1600
+F 0 "#PWR017" H 6800 1450 50  0001 C CNN
+F 1 "+3.3V" V 6815 1728 50  0000 L CNN
+F 2 "" H 6800 1600 50  0001 C CNN
+F 3 "" H 6800 1600 50  0001 C CNN
+	1    6800 1600
+	-1   0    0    1   
+$EndComp
+Text Notes 6350 950  0    60   ~ 0
+pullups for LED driver output of icebreaker to control GPIOs for SAOs\n
 $EndSCHEMATC
