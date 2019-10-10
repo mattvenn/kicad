@@ -17,5 +17,5 @@
 * 3.3v regulator [LD1117S33TR](https://uk.farnell.com/stmicroelectronics/ld1117s33tr/v-reg-ldo-3-3v-smd-1117-sot-223/dp/1202826)
 * 2 x 10k pullup resistors if using iCEBreaker to control GPIOs
 * sliding SMT switch [JS102012SAQN](https://uk.farnell.com/c-k-components/js102011saqn/switch-spdt-0-6a-6vdc-side-smd/dp/2320017)
-* 5 x female 2x6 pin header 2.54mm spacing, eg this [Pololu part](https://www.pololu.com/product/1023)
+* 5 x female 2x3 pin header with 2.54mm spacing, eg this [Pololu part](https://www.pololu.com/product/1023)
 
