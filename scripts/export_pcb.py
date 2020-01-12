@@ -6,7 +6,7 @@ import subprocess
 import os
 
 from pcbnew import TEXTE_MODULE, TEXTE_PCB, EDA_TEXT, FromMM, ToMM
-from ConfigParser import ConfigParser, NoSectionError   
+from configparser import ConfigParser, NoSectionError
 
 """
 good resources:
@@ -29,7 +29,7 @@ def get_board_name():
     return args.board.replace('.kicad_pcb','')
 
 def get_nice_name():
-    return config.get('meta', 'name', get_board_name())
+    return config.get('meta', 'name')
 
 def calculate_size(brd):
     # older kicad is brd.GetBoundingBox()
@@ -61,10 +61,12 @@ def get_git_version():
 
 def write_overview(brd):
     out_name = get_board_name()
-
     filename = args.output_dir + "/" + out_name + ".md"
     log = open(filename, 'w')
-    log.write("\ ![logo](%s)\n\n" % config.get('logo', 'logo'))
+    try:
+        log.write("\ ![logo](%s)\n\n" % config.get('logo', 'logo'))
+    except NoSectionError:
+        pass
 
     log.write("# PCB layout for %s\n\n" % get_nice_name())
     log.write("\ ![overview](%s/%s-overview.png)\n\n" % (args.output_dir, out_name))
@@ -83,9 +85,12 @@ def write_overview(brd):
 
     log.close()
 
+def convert_to_pdf():
     print("generate pdf")
+    out_name = get_board_name()
+    filename = args.output_dir + "/" + out_name + ".md"
     os.system("pandoc %s -o %s" % (filename, args.output_dir + "/" + out_name + ".pdf"))
-    os.remove("%s/%s-overview.png" % (args.output_dir, out_name)) # remove the png after making the pdf
+    #os.remove("%s/%s-overview.png" % (args.output_dir, out_name)) # remove the png after making the pdf
     #os.remove(filename) # remove the markdown file
 
 # options taken mostly from https://github.com/blairbonnett-mirrors/kicad/blob/master/demos/python_scripts_examples/plot_board.py
@@ -204,18 +209,23 @@ if __name__ == '__main__':
     for draw in brd.GetDrawings():
         if isinstance(draw, pcbnew.TEXTE_PCB):
             if draw.GetText().startswith("$ver$"):
+                print("found $ver$ marker")
                 draw.SetText( "%s %s" % (get_git_version(), datetime.date.today() ))
+
         if isinstance(draw, pcbnew.TEXTE_PCB):
             if draw.GetText().startswith("$git$"):
+                print("found $git$ marker")
                 draw.SetText( "%s" % (get_git_version()))
 
         if isinstance(draw, pcbnew.TEXTE_PCB):
             if draw.GetText().startswith("$date$"):
+                print("found $date$ marker")
                 draw.SetText( "%s" % (datetime.date.today()))
                 
     plot(brd, args)
-    if not args.no_pdf:
-        write_overview(brd)
+    write_overview(brd)
+    if args.no_pdf:
+        convert_to_pdf()
     zip_it()
 
     if args.export_step:
